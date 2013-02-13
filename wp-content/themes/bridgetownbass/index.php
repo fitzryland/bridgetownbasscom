@@ -94,7 +94,13 @@ $venImg = get_field('image', $taxAndVenID);
 		<img class="poster big" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>"/>
 		<div class="panelWrap">
 			<div class="panel venue">
-				<h1><?php echo $venName; ?></h1>
+				<?php if ($venCalendarURL) { ?>
+					<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
+						<h1><?php echo $venName; ?></h1>
+					</a>
+				<?php } else { ?>
+					<h1><?php echo $venName; ?></h1>
+				<?php }; ?>
 				<img class="venImg" src="<?php echo $venImg['sizes']['artist-img']; ?>">
 				<div class="social">
 					<?php if ($venTwitterURL) { ?>
@@ -115,13 +121,6 @@ $venImg = get_field('image', $taxAndVenID);
 						<div class="icon">
 							<a href="<?php echo $venMapURL; ?>" target="_new" title="">
 								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="ma"/>
-							</a>
-						</div>
-					<?php }; ?>
-					<?php if ($venCalendarURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="c"/>
 							</a>
 						</div>
 					<?php }; ?>
