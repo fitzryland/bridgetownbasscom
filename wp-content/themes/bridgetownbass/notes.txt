@@ -1,0 +1,73 @@
+- Add image size to require the poster image to be the right size
+	- check to see if there is javascript determining the size of those containers.
+- Social icons under artists are not centered
+
+Could use json file on server to set timezone
+
+SET time_zone = '+00:00';
+SELECT * ,
+(UNIX_TIMESTAMP( wp_postmeta.meta_value )) AS TIMESTAMP ,
+NOW() AS now
+FROM wp_postmeta, wp_posts
+WHERE wp_posts.ID = wp_postmeta.post_id
+AND wp_postmeta.meta_key =  'date'
+AND wp_posts.post_status =  'publish'
+AND wp_posts.post_type =  'events'
+ORDER BY wp_postmeta.meta_value ASC
+
+2013-02-08 01:48:11
+
+
+
+SELECT * , (
+UNIX_TIMESTAMP( wp_postmeta.meta_value )
+) AS TIMESTAMP
+FROM wp_postmeta, wp_posts
+WHERE wp_posts.ID = wp_postmeta.post_id
+AND wp_postmeta.meta_key =  'date'
+AND wp_posts.post_status =  'publish'
+AND wp_posts.post_type =  'events'
+ORDER BY wp_postmeta.meta_value ASC
+
+
+SELECT * 
+FROM wp_postmeta, wp_posts
+WHERE wp_posts.ID = wp_postmeta.post_id
+AND wp_postmeta.meta_key =  'date'
+AND (
+UNIX_TIMESTAMP( $wpdb->postmeta.meta_value ) +68400
+) > NOW()
+AND wp_posts.post_status =  'publish'
+AND wp_posts.post_type =  'events'
+ORDER BY wp_postmeta.meta_value ASC
+
+SELECT * , (
+UNIX_TIMESTAMP( wp_postmeta.meta_value ) +86400 +10800
+) AS TIMESTAMP
+FROM wp_postmeta, wp_posts
+WHERE wp_posts.ID = wp_postmeta.post_id
+AND wp_postmeta.meta_key =  'date'
+AND TIMESTAMP > 
+AND wp_posts.post_status =  'publish'
+AND wp_posts.post_type =  'events'
+ORDER BY wp_postmeta.meta_value ASC
+
+
+SELECT * , (
+UNIX_TIMESTAMP( wp_postmeta.meta_value ) +86400 +10800
+) AS tipping_point
+FROM wp_postmeta, wp_posts
+WHERE wp_posts.ID = wp_postmeta.post_id
+AND wp_postmeta.meta_key =  'date'
+AND wp_posts.post_status =  'publish'
+AND wp_posts.post_type =  'events'
+ORDER BY wp_postmeta.meta_value ASC
+
+
+- CoAg - 192.168.88.110
+- Bohemia - 192.168.1.11
+
+
+
+1353236400 - 10800 = 1353225600 ?
+					 1353225600
