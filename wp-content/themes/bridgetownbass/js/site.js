@@ -39,7 +39,6 @@ $(document).ready(function() {
 	$('.static h2').click(function() {
 		if ($(this).hasClass('current')) {
 			var x = $(this).parents('article').find('.poster'); //needs to be poster img
-			console.log(x);
 			backToPoster(x);
 		} else {
 			// find index of clicked element using .index()
@@ -100,5 +99,40 @@ $(document).ready(function() {
 		$(this).fadeOut('slow');
 		$(this).empty();
 	});
-
+	// Border Color Rotation
+	// full rainbow
+	// var i = 0;
+	// setInterval(function() {
+	// 	var color = "hsl(" + i + ", 100%, 50%)";
+	// 	$('article').each(function() {
+	// 		$(this).css('border-color',color);
+	// 	});
+	// 	if (i >= 360) {
+	// 		i = 0;
+	// 	} else {
+	// 		i = i + 2;
+	// 	}
+	// },1);
+	
+	// $blue:#00dfff;
+	// $purple:#aa3fff;
+	// $orange:#ff9f00;
+	
+	
+	var i = 0,
+		colors = new Array("#00dfff","#aa3fff","#ff9f00");
+	setInterval(function() {
+		$('article').each(function() {
+			$(this).css('border-color',colors[i]);
+		});
+		if (i === 2) {
+			i = 0;
+		} else {
+			i = i + 1;
+		}
+	},150);
+	
+	
+	
+	
 });
