@@ -95,37 +95,21 @@ header, section, footer {
 }
 header {
 	background-image:url(images/articleBG_1.gif);
+	font-size:15px;
 	margin: 0 auto;
 	padding-top: 1em;
 	position: relative;
-	margin:0 auto;
-	font-size:15px;
+	text-align:center;
 	h1 {
-		color:$blue;
-		margin:0 0 0 -0.7em;
-		position:relative;
-		text-align:center;
+		font-size:5em;
+		line-height:0.5em;
+		margin:0;
+		padding:0;
 		z-index:0;
 		a:link, a:visited {
 			color:$blue;
 		}
 	}
-}
-.menu-main-nav-container {
-	position:absolute;
-	top:0;
-}
-#bridge, #town, #bass {
-	line-height:.8em;
-}
-#bridge {
-	font-size:4em;
-}
-#town {
-	font-size:4.9em;
-}
-#bass {
-	font-size:5.5em;
 }
 #menu-main-nav {
 	padding:0;
@@ -135,29 +119,10 @@ header {
 		z-index:1100;
 	}
 	li {
+		display:inline;
+		font-size:4.8em;
+		line-height:1em;
 		z-index:900;
-	}
-	li:first-child {
-		font-size:6.6em;
-		left:-1.5em;
-		position:absolute;
-		top:1.3em;
-		transform: rotate(-90deg);
-		-ms-transform: rotate(-90deg); /* IE 9 */
-		-webkit-transform: rotate(-90deg); /* Safari and Chrome */
-		-o-transform: rotate(-90deg); /* Opera */
-		-moz-transform: rotate(-90deg); /* Firefox */
-	}
-	li:last-child {
-		font-size:8.1em;
-		position:absolute;
-		left:2.2em;
-		top:0.9em;
-		transform: rotate(90deg);
-		-ms-transform: rotate(90deg); /* IE 9 */
-		-webkit-transform: rotate(90deg); /* Safari and Chrome */
-		-o-transform: rotate(90deg); /* Opera */
-		-moz-transform: rotate(90deg); /* Firefox */
 	}
 }
 section {
@@ -462,11 +427,13 @@ h1._404 {
 	header {
 		font-size:16px;
 		h1 {
-			font-size:1.9em;
+			font-size:3em;
 			margin:0;
 		}
-		.menu-main-nav-container {
-			display:none;
+		#menu-main-nav {
+			li {
+				font-size:2.9em;
+			}
 		}
 	}
 	article {
