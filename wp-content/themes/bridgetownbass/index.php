@@ -51,8 +51,15 @@ $venFacebookURL = get_field('facebook_url', $taxAndVenID);
 $venMapURL = get_field('map_url', $taxAndVenID);
 $venName = $ven['name'];
 $venImg = get_field('image', $taxAndVenID);
+$highlight = get_field('highlight');
 ?>
-<article class="group">
+<article <?php
+if ($highlight == 'Yes') {
+	echo "class=\"group highlight\"";
+} else {
+	echo "class=\"group\"";
+}
+?>>
 	<!--<div class="readable">-->
 		<?php
 		
