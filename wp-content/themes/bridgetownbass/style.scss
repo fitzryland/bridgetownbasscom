@@ -470,16 +470,26 @@ h1._404 {
 	header, section, footer {
 		width: $widthSmall;
 	}
+//	header {
+//		font-size:16px;
+//		h1 {
+//			font-size:3em;
+//			margin:0;
+//		}
+//		#menu-main-nav {
+//			li {
+//				font-size:2.9em;
+//			}
+//		}
+//	}
 	header {
 		font-size:16px;
 		h1 {
-			font-size:3em;
+			font-size:1.9em;
 			margin:0;
 		}
-		#menu-main-nav {
-			li {
-				font-size:2.9em;
-			}
+		.menu-main-nav-container {
+			display:none;
 		}
 	}
 	article {
