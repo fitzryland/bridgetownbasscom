@@ -17,8 +17,6 @@ ORDER BY wp_postmeta.meta_value ASC
 
 2013-02-08 01:48:11
 
-
-
 SELECT * , (
 UNIX_TIMESTAMP( wp_postmeta.meta_value )
 ) AS TIMESTAMP
