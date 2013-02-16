@@ -37,7 +37,8 @@
 		<div class="fixed"></div>
 		<header id="header">
 			<h1>
-				<a href="<?php echo home_url(); ?>">BRIDGETOWNBASS</a>
+				<a href="<?php echo home_url(); ?>"><span id="bridge">BRIDGE</span></br><span id="town">TOWN</span></br><span id="bass">BASS</span></a>
+				<!--<a href="<?php // echo home_url(); ?>">BRIDGETOWNBASS</a>-->
 			</h1>
 			<?php wp_nav_menu('primary'); ?>
 		</header>
