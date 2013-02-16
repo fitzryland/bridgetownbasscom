@@ -33,8 +33,6 @@ $(document).ready(function() {
 	});
 	// Parse lrgEventImgURLs JSON
 	var lrgEventImgURLs = jQuery.parseJSON($('#lrgEventImgURLs').text());
-
-
 	// Slide Panels
 	$('.static h2').click(function() {
 		if ($(this).hasClass('current')) {
@@ -113,8 +111,4 @@ $(document).ready(function() {
 			i = i + 1;
 		}
 	},150);
-	
-	
-	
-	
 });
