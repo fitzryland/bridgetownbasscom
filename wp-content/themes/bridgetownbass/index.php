@@ -144,9 +144,16 @@ if ($highlight == 'Yes') {
 				$artistPhoto = get_field('artist_photo', $taxAndIDmusic);
 				$artistFacebookURL = get_field('facebook_url', $taxAndIDmusic);
 				$artistMyspaceURL = get_field('myspace_url', $taxAndIDmusic);
+				$artistWebURL = get_field('web_url', $taxAndIDmusic);
 				?>
 			<div class="panel artist <?php echo "artistMeta" . $i; ?>">
-				<h1><?php echo $artistName; ?></h1>
+				<?php if ($artistWebURL) { ?>
+					<a href="<?php echo $artistWebURL; ?>" target="_new">
+						<h1><?php echo $artistName; ?></h1>
+					</a>
+				<?php } else { ?>
+					<h1><?php echo $artistName; ?></h1>
+				<?php }; ?>
 				<img src="<?php echo $artistPhoto['sizes']['artist-img']; ?>" class="artistImg"/>
 				<div class="social">
 					<!--

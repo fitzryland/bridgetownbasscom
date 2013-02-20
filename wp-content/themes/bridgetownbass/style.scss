@@ -101,6 +101,10 @@ header {
 		margin:0 0 0 -0.7em;
 		position:relative;
 		text-align:center;
+//		font-size:5em;
+//		line-height:0.5em;
+//		margin:0;
+//		padding:0;
 		z-index:0;
 		a:link, a:visited {
 			color:$blue;
@@ -143,8 +147,6 @@ header {
 		-moz-transform: rotate(90deg); /* Firefox */
 	}
 }
-
-
 .menu-main-nav-container {
        position:absolute;
        top:0;
@@ -161,8 +163,6 @@ header {
 #bass {
        font-size:5.5em;
 }
-
-
 section {
 	margin:0 auto;
 }
@@ -175,7 +175,6 @@ article {
 	position:relative;
 	z-index:50;
 }
-
 article:before, article:after {
 //	position:absolute;
 //	content:url('images/highlightDither_3.gif');
@@ -212,12 +211,6 @@ article:after {
 //article:nth-child(3n):before, article:nth-child(3n):after {
 //	content:url('images/highlightDither_2.gif');
 //}
-
-
-
-
-
-
 .thumbWrap {
 	height:166px;
 	left:-158px;
