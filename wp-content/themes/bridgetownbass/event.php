@@ -177,6 +177,7 @@ if ($highlight == 'Yes') {
 				<h1>Share This Event</h1>
 				<p>Share the permalink to the event via facebook, twitter, pinterest?, tumblr?, and email. Also have an easily copied link and a clickable link.</p>
 				<a href="<?php the_permalink(); ?>">permalink</a>
+				<?php echo sharing_display(); ?>
 			</div>
 		</div>
 	</div>
