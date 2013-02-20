@@ -3,7 +3,7 @@ $(document).ready(function() {
 	// Panel Height Set
 	$('.poster').each(function() {
 		$(this).load(function() {
-			var panelH = $(this).height();
+			var panelH = $(this).height() + 16;
 			$(this).parents('article').find('.panel').each(function(i,v) {
 				$(v).height(panelH);
 			});
@@ -12,14 +12,22 @@ $(document).ready(function() {
 		});
 	});
 	function backToPoster(x) {
-		var $arti = $(x).parents('article');
-		var ogW = $(x).data("dimentions").w,
-			ogH = $(x).data("dimentions").h;
 		$(x).animate({
-			width: ogW,
-			height: ogH
+			bottom: 0
 		});
+		var $arti = $(x).parents('article'),
+			$arrow = $arti.find('.arrow');
+		
+		// var ogW = $(x).data("dimentions").w,
+		// 	ogH = $(x).data("dimentions").h;
+		// $(x).animate({
+		// 	width: ogW,
+		// 	height: ogH
+		// });
+		
+		$arrow.removeClass('live');
 		$(x).removeClass('small').addClass('big');
+		console.log($arti.find('h2.current'));
 		$arti.find('h2.current').removeClass('current');
 	}
 	// #cover height set
@@ -43,9 +51,9 @@ $(document).ready(function() {
 			var $arti = $(this).parents('article'),
 				clickedI = $arti.find('.static h2').index(this),
 				$poster = $arti.find('.poster'),
+				$arrow = $arti.find('.arrow'),
 				tarPanWrap = $arti.find('.panelWrap')[0],
 				tarMar = clickedI * -300;
-
 			$(this).siblings().each(function() {
 				$(this).removeClass('current');
 			});
@@ -54,18 +62,27 @@ $(document).ready(function() {
 			$(tarPanWrap).animate({
 				marginLeft: tarMar
 			}, "slow");
+			// display bouncing arrow
+			$arrow.addClass('live');
 			// shrink .poster image
 			if ($poster.hasClass('big')) {
 				$poster.removeClass('big').addClass('small');
-
-				var wid = 50,
-					hi = (5/30) * $poster.data("dimentions").h;
+				// Slide poster down				
 				$poster.animate({
-					width: wid,
-					height: hi
+					bottom: -370
 				});
+				// var wid = 50,
+				// 	hi = (5/30) * $poster.data("dimentions").h;
+				// $poster.animate({
+				// 	width: wid,
+				// 	height: hi
+				// });
 			}
 		}
+	});
+	$('.arrow').click(function() {
+		var x = $(this).siblings('.poster');
+		backToPoster(x);
 	});
 	// what happens when you click a .poster?
 	$('.poster').click(function() {

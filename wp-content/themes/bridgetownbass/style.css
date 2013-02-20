@@ -6,15 +6,46 @@ Version: 		0.1
 Author: 		Fitz Ryland
 Author URI: 	http://FitzhughRyland.com
 */
-/*
+@-webkit-keyframes bounce {
+  0% {
+    margin-bottom: 0em; }
 
-1. General
-2. Narrow
-3. Medium
-4. Wide
-5. Overrides
+  50% {
+    margin-bottom: -0.5em; }
 
-*/
+  100% {
+    margin-bottom: 0em; } }
+
+@-moz-keyframes bounce {
+  0% {
+    margin-bottom: 0em; }
+
+  50% {
+    margin-bottom: -0.5em; }
+
+  100% {
+    margin-bottom: 0em; } }
+
+@-o-keyframes bounce {
+  0% {
+    margin-bottom: 0em; }
+
+  50% {
+    margin-bottom: -0.5em; }
+
+  100% {
+    margin-bottom: 0em; } }
+
+@keyframes bounce {
+  0% {
+    margin-bottom: 0em; }
+
+  50% {
+    margin-bottom: -0.5em; }
+
+  100% {
+    margin-bottom: 0em; } }
+
 /*										1. *general
 */
 .clear {
@@ -174,36 +205,6 @@ article:after {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   z-index: 2000; }
 
-.thumbWrap {
-  height: 166px;
-  left: -158px;
-  margin-top: -83px;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  width: 166px; }
-
-.thumb {
-  border-top: 0.5em solid #ff9f00;
-  border-bottom: 0.5em solid #ff9f00;
-  border-left: 0.5em solid #ff9f00;
-  margin-left: 150px;
-  position: relative; }
-
-.thumb:hover {
-  cursor: pointer; }
-
-.thumb:hover:after {
-  content: "";
-  border-top: 0.4em solid transparent;
-  border-bottom: 0.4em solid transparent;
-  border-left: 0.4em solid #ff9f00;
-  height: 0;
-  left: 50%;
-  position: absolute;
-  right: 50%;
-  width: 0; }
-
 .flip {
   float: left;
   height: 450px;
@@ -225,11 +226,41 @@ article:after {
     position: absolute;
     z-index: 999; }
   .flip img.small {
-    border-top: 0.5em solid #ff9f00;
-    border-right: 0.5em solid #ff9f00;
-    border-left: 0.5em solid transparent;
-    border-bottom: 0.5em solid transparent;
-    margin: 0 0 -0.5em -0.5em; }
+    border-top: 0.5em solid #ff9f00; }
+  .flip img.small:after {
+    content: "BOOM";
+    border-top: 4em solid transparent;
+    border-right: 4em solid transparent;
+    border-bottom: 4em solid #ff9f00;
+    border-left: 4em solid transparent;
+    left: 0em;
+    position: absolute;
+    top: 0em;
+    height: 1em;
+    width: 1em;
+    z-index: 1001; }
+  .flip .live {
+    border-top: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1em solid #ff9f00;
+    border-left: 1em solid transparent;
+    bottom: 2em;
+    left: 9em;
+    position: absolute;
+    height: 0;
+    width: 0;
+    z-index: 1001;
+    -webkit-animation: bounce 1s infinite;
+    /* Safari 4+ */
+    -moz-animation: bounce 1s infinite;
+    /* Fx 5+ */
+    -o-animation: bounce 1s infinite;
+    /* Opera 12+ */
+    animation: bounce 1s infinite;
+    /* IE 10+ */ }
+  .flip .live:hover {
+    border-bottom-color: #00dfff;
+    cursor: pointer; }
 
 .panelWrap {
   position: absolute;
@@ -246,7 +277,6 @@ article:after {
     text-align: center; }
 
 .artist {
-  border-right: 0.5em solid #ff9f00;
   width: 292px; }
   .artist h1 {
     text-align: center; }

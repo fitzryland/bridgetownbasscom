@@ -42,8 +42,65 @@ $venFacebookURL = get_field('facebook_url', $taxAndVenID);
 $venMapURL = get_field('map_url', $taxAndVenID);
 $venName = $venInfoArray['name'];
 $venImg = get_field('image', $taxAndVenID);
+
+
+
+
+
+
+
+
+
+
+
+
+// Date
+$dateRaw = get_field('date');
+$dateArray = explode('/',$dateRaw);
+$year = $dateArray[0];
+$monthNum = $dateArray[1];
+$monthName = date("M", mktime(0, 0, 0, $monthNum, 10));
+$day = date("j",strtotime($dateRaw));
+$dayOfWeek = date("D",strtotime($dateRaw));
+// Photo
+$photoMeta = get_field('photo');
+$photoURL = $photoMeta['sizes']['medium'];
+
+$lrgEventImgURLs[] = $photoMeta['sizes']['large']; // TODO use for lightbox of large poster image
+
+$photoAlt = $photoMeta['alt'];
+// Venue & Musicians
+$stdVen = get_the_terms($post->ID, 'venues');
+$venIDarray = array_keys($stdVen);
+$venID = $venIDarray[0];
+$venInfoArray = get_object_vars($stdVen[$venID]);
+$taxAndIDmusic = "artist_" . $ar['term_id'];
+$taxAndVenID = "venues_" . $venID;
+$venCalendarURL = get_field('calendar_url', $taxAndVenID);
+$venTwitterURL = get_field('twitter_url', $taxAndVenID);
+$venFacebookURL = get_field('facebook_url', $taxAndVenID);
+$venMapURL = get_field('map_url', $taxAndVenID);
+$venName = $venInfoArray['name'];
+$venImg = get_field('image', $taxAndVenID);
+$highlight = get_field('highlight');
+$rsvp = get_field('rsvp');
 ?>
-<article>
+<article <?php
+if ($highlight == 'Yes') {
+	echo "class=\"group highlight\"";
+} else {
+	echo "class=\"group\"";
+}
+?>>
+	<!--<div class="readable">-->
+		<?php
+		
+//		echo "Current Time: " . "</br>" . date("D M d, Y G:i a", $curTime) . "</br>" . "</br>";
+		
+//		echo "Expiration Time: " . "</br>" . date("D M d, Y G:i a", $post->TIMESTAMP) . "</br>" . "</br>";
+		
+		?>
+	<!--</div>-->
 	<div class="static">
 		<div class="date">
 			<span class="dw"><?php echo $dayOfWeek; ?></span>
@@ -74,9 +131,16 @@ $venImg = get_field('image', $taxAndVenID);
 	</div>
 	<div class="flip">
 		<img class="poster big" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>"/>
+		<div class="arrow"></div>
 		<div class="panelWrap">
 			<div class="panel venue">
-				<h1><?php echo $venName; ?></h1>
+				<?php if ($venCalendarURL) { ?>
+					<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
+						<h1><?php echo $venName; ?></h1>
+					</a>
+				<?php } else { ?>
+					<h1><?php echo $venName; ?></h1>
+				<?php }; ?>
 				<img class="venImg" src="<?php echo $venImg['sizes']['artist-img']; ?>">
 				<div class="social">
 					<?php if ($venTwitterURL) { ?>
@@ -100,13 +164,6 @@ $venImg = get_field('image', $taxAndVenID);
 							</a>
 						</div>
 					<?php }; ?>
-					<?php if ($venCalendarURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="c"/>
-							</a>
-						</div>
-					<?php }; ?>
 				</div>
 			</div>
 			<?php
@@ -119,9 +176,16 @@ $venImg = get_field('image', $taxAndVenID);
 				$artistPhoto = get_field('artist_photo', $taxAndIDmusic);
 				$artistFacebookURL = get_field('facebook_url', $taxAndIDmusic);
 				$artistMyspaceURL = get_field('myspace_url', $taxAndIDmusic);
+				$artistWebURL = get_field('web_url', $taxAndIDmusic);
 				?>
 			<div class="panel artist <?php echo "artistMeta" . $i; ?>">
-				<h1><?php echo $artistName; ?></h1>
+				<?php if ($artistWebURL) { ?>
+					<a href="<?php echo $artistWebURL; ?>" target="_new">
+						<h1><?php echo $artistName; ?></h1>
+					</a>
+				<?php } else { ?>
+					<h1><?php echo $artistName; ?></h1>
+				<?php }; ?>
 				<img src="<?php echo $artistPhoto['sizes']['artist-img']; ?>" class="artistImg"/>
 				<div class="social">
 					<!--

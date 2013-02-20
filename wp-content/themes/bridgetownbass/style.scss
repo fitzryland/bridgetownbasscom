@@ -15,15 +15,26 @@ $blue:#00dfff;
 $purple:#aa3fff;
 $orange:#ff9f00;
 
-/*
-
-1. General
-2. Narrow
-3. Medium
-4. Wide
-5. Overrides
-
-*/
+@-webkit-keyframes bounce {
+	0%		{ margin-bottom:0em; }
+	50%		{ margin-bottom:-0.5em; }
+	100%	{ margin-bottom:0em; }
+}
+@-moz-keyframes bounce {
+	0%		{ margin-bottom:0em; }
+	50%		{ margin-bottom:-0.5em; }
+	100%	{ margin-bottom:0em; }
+}
+@-o-keyframes bounce {
+	0%		{ margin-bottom:0em; }
+	50%		{ margin-bottom:-0.5em; }
+	100%	{ margin-bottom:0em; }
+}
+@keyframes bounce {
+	0%		{ margin-bottom:0em; }
+	50%		{ margin-bottom:-0.5em; }
+	100%	{ margin-bottom:0em; }
+}
 
 /*										1. *general
 */
@@ -211,36 +222,6 @@ article:after {
 //article:nth-child(3n):before, article:nth-child(3n):after {
 //	content:url('images/highlightDither_2.gif');
 //}
-.thumbWrap {
-	height:166px;
-	left:-158px;
-	margin-top:-83px;
-	overflow:hidden;
-	position:absolute;
-	top:50%;
-	width:166px;
-}
-.thumb {
-	border-top:0.5em solid $orange;
-	border-bottom:0.5em solid $orange;
-	border-left:0.5em solid $orange;
-	margin-left:150px;
-	position:relative;
-}
-.thumb:hover {
-	cursor:pointer;
-}
-.thumb:hover:after {
-	content:"";
-	border-top:0.4em solid transparent;
-	border-bottom:0.4em solid transparent;
-	border-left:0.4em solid $orange;
-	height:0;
-	left:50%;
-	position:absolute;
-	right:50%;
-	width:0;
-}
 .flip {
 	float:left;
 	height:450px;
@@ -267,10 +248,44 @@ article:after {
 	}
 	img.small {
 		border-top: 0.5em solid $orange;
-		border-right: 0.5em solid $orange;
-		border-left: 0.5em solid transparent;
-		border-bottom: 0.5em solid transparent;
-		margin:0 0 -0.5em -0.5em;
+//		border-right: 0.5em solid $orange;
+//		border-left: 0.5em solid transparent;
+//		border-bottom: 0.5em solid transparent;
+//		margin:0 0 -0.5em -0.5em;
+	}
+	img.small:after {
+		content:"BOOM";
+		border-top:4em solid transparent;
+		border-right:4em solid transparent;
+		border-bottom:4em solid $orange;
+		border-left:4em solid transparent;
+		left:0em;
+		position:absolute;
+		top:0em;
+		height:1em;
+		width:1em;
+		z-index:1001;
+	}
+	.live {
+		border-top:1em solid transparent;
+		border-right:1em solid transparent;
+		border-bottom:1em solid $orange;
+		border-left:1em solid transparent;
+		bottom:2em;
+		left:9em;
+		position:absolute;
+		height:0;
+		width:0;
+		z-index:1001;
+		
+		-webkit-animation: bounce 1s infinite; /* Safari 4+ */
+		-moz-animation:    bounce 1s infinite; /* Fx 5+ */
+		-o-animation:      bounce 1s infinite; /* Opera 12+ */
+		animation:         bounce 1s infinite; /* IE 10+ */
+	}
+	.live:hover {
+		border-bottom-color:$blue;
+		cursor:pointer;
 	}
 }
 .panelWrap {
@@ -289,7 +304,7 @@ article:after {
 	}
 }
 .artist {
-	border-right:0.5em solid $orange;
+//	border-right:0.5em solid $orange;
 	width:292px;
 	h1 {
 		text-align:center;

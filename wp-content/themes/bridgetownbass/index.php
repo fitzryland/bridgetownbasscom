@@ -100,6 +100,7 @@ if ($highlight == 'Yes') {
 	</div>
 	<div class="flip">
 		<img class="poster big" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>"/>
+		<div class="arrow"></div>
 		<div class="panelWrap">
 			<div class="panel venue">
 				<?php if ($venCalendarURL) { ?>
