@@ -41,7 +41,6 @@ a:link, a:visited {
 	color:$purple;
 	text-decoration:none;
 }
-
 a:hover, a:active {
 	color:$orange;
 	text-decoration:none;
@@ -50,12 +49,9 @@ html {
 	margin:0;
 	padding:0;
 }
-#BGFixed {
-	position:fixed;
-}
 body {
 	background:#000000 url('images/BGBG2_4.gif');
-	color:white;
+	color:$blue;
 	font:16px 'Anton', Impact, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
 	margin:0;
 	padding:0;
@@ -105,10 +101,6 @@ header {
 		margin:0 0 0 -0.7em;
 		position:relative;
 		text-align:center;
-//		font-size:5em;
-//		line-height:0.5em;
-//		margin:0;
-//		padding:0;
 		z-index:0;
 		a:link, a:visited {
 			color:$blue;
@@ -263,6 +255,12 @@ article:after {
 	position:relative;
 	width:300px;
 	z-index:100;
+	a:link, a:visited {
+		color:$blue;
+	}
+	a:hover, a:active {
+		color:$orange;
+	}
 	img.venImg {
 		display: block;
 		margin: 0 auto;
@@ -297,12 +295,6 @@ article:after {
 		text-align: center;
 	}
 }
-.venue {
-	.social {
-//		margin: 0 auto;
-//		width: 10em;
-	}
-}
 .artist {
 	border-right:0.5em solid $orange;
 	width:292px;
@@ -328,9 +320,6 @@ article:after {
 		position:relative;
 		text-align:center;
 	}
-	h2.curArt {
-		color:white;
-	}
 	h2:hover {
 		color:$orange;
 		cursor:pointer;
@@ -339,7 +328,7 @@ article:after {
 		content:"";
 		border-top:0.4em solid transparent;
 		border-bottom:0.4em solid transparent;
-		border-left:0.4em solid white;
+		border-left:0.4em solid $orange;
 		left:-0.4em;
 		position:absolute;
 		top:0.4em;
@@ -361,20 +350,6 @@ article:after {
 		height:0;
 		width:0;
 	}
-}
-.curArt {
-	position:relative;
-}
-.curArt:after {
-	content:"";
-	border-top:0.4em solid transparent;
-	border-bottom:0.4em solid transparent;
-	border-left:0.4em solid white;
-	left:-0.4em;
-	position:absolute;
-	top:0.4em;
-	height:0;
-	width:0;
 }
 .date {
 	color:$orange;
@@ -399,7 +374,7 @@ h2.venue {
 	text-align:center;
 }
 h2.venue:hover {
-	color:white;
+	color:$orange;
 }
 .meta {
 	display-style-type:none;
@@ -418,7 +393,7 @@ h2.venue:hover {
 		color:$blue;
 	}
 	a:hover, a:active {
-		color:white;
+		color:$orange;
 	}
 }
 #lrgEventImgURLs {

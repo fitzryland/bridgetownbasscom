@@ -38,12 +38,9 @@ html {
   margin: 0;
   padding: 0; }
 
-#BGFixed {
-  position: fixed; }
-
 body {
   background: black url("images/BGBG2_4.gif");
-  color: white;
+  color: #00dfff;
   font: 16px "Anton", Impact, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
   margin: 0;
   padding: 0;
@@ -214,6 +211,10 @@ article:after {
   position: relative;
   width: 300px;
   z-index: 100; }
+  .flip a:link, .flip a:visited {
+    color: #00dfff; }
+  .flip a:hover, .flip a:active {
+    color: #ff9f00; }
   .flip img.venImg {
     display: block;
     margin: 0 auto;
@@ -266,8 +267,6 @@ article:after {
     margin: 0;
     position: relative;
     text-align: center; }
-  .static h2.curArt {
-    color: white; }
   .static h2:hover {
     color: #ff9f00;
     cursor: pointer; }
@@ -275,7 +274,7 @@ article:after {
     content: "";
     border-top: 0.4em solid transparent;
     border-bottom: 0.4em solid transparent;
-    border-left: 0.4em solid white;
+    border-left: 0.4em solid #ff9f00;
     left: -0.4em;
     position: absolute;
     top: 0.4em;
@@ -294,20 +293,6 @@ article:after {
     top: 0.4em;
     height: 0;
     width: 0; }
-
-.curArt {
-  position: relative; }
-
-.curArt:after {
-  content: "";
-  border-top: 0.4em solid transparent;
-  border-bottom: 0.4em solid transparent;
-  border-left: 0.4em solid white;
-  left: -0.4em;
-  position: absolute;
-  top: 0.4em;
-  height: 0;
-  width: 0; }
 
 .date {
   color: #ff9f00;
@@ -329,7 +314,7 @@ h2.venue {
   text-align: center; }
 
 h2.venue:hover {
-  color: white; }
+  color: #ff9f00; }
 
 .meta {
   display-style-type: none;
@@ -345,7 +330,7 @@ h2.venue:hover {
   .meta a:link, .meta a:visited {
     color: #00dfff; }
   .meta a:hover, .meta a:active {
-    color: white; }
+    color: #ff9f00; }
 
 #lrgEventImgURLs {
   display: none; }

@@ -55,93 +55,93 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>61</integer>
+			<integer>0</integer>
 		</dict>
 		<key>header.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>54</integer>
+				<integer>23</integer>
 				<key>line</key>
-				<integer>39</integer>
+				<integer>40</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>60</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>7</integer>
+			<integer>0</integer>
 		</dict>
 		<key>index.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>36</integer>
 				<key>line</key>
-				<integer>119</integer>
+				<integer>53</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>95</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>157</integer>
+			<integer>30</integer>
 		</dict>
 		<key>js/site.js</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>5</integer>
+				<integer>31</integer>
 				<key>line</key>
-				<integer>132</integer>
+				<integer>104</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>91</integer>
+			<integer>67</integer>
 		</dict>
 		<key>notes.txt</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>9</integer>
 				<key>line</key>
-				<integer>4</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>style.scss</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>11</integer>
-				<key>line</key>
-				<integer>14</integer>
+				<integer>188</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>152</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>9</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>14</integer>
+				<integer>174</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>15</integer>
+				<integer>9</integer>
 				<key>line</key>
-				<integer>14</integer>
+				<integer>188</integer>
 			</dict>
+		</dict>
+		<key>style.scss</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>9</integer>
+				<key>line</key>
+				<integer>505</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>464</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -150,11 +150,13 @@
 		<string>footer.php</string>
 		<string>header.php</string>
 		<string>style.scss</string>
+		<string>notes.txt</string>
 		<string>js/site.js</string>
+		<string>functions.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<false/>
 	<key>windowFrame</key>
-	<string>{{739, 4}, {701, 874}}</string>
+	<string>{{396, 4}, {1044, 874}}</string>
 </dict>
 </plist>
