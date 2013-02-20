@@ -1,10 +1,13 @@
 $(document).ready(function() {
 	"use strict";
+	var $posters = $('.poster');
 	// Panel Height Set
-	$('.poster').each(function() {
+	$posters.each(function() {
 		$(this).load(function() {
-			var panelH = $(this).height() + 16;
-			$(this).parents('article').find('.panel').each(function(i,v) {
+			var panelH = $(this).height() + 16,
+				$article = $(this).parents('article');
+				
+			$article.find('.panel').each(function(i,v) {
 				$(v).height(panelH);
 			});
 			// asign poster dimention .data() to each .poster
@@ -85,9 +88,9 @@ $(document).ready(function() {
 		backToPoster(x);
 	});
 	// what happens when you click a .poster?
-	$('.poster').click(function() {
+	$poster.click(function() {
 		if ($(this).hasClass('big')) {
-			var i = $('.poster').index(this),
+			var i = $poster.index(this),
 				$cover = $('#cover');
 			// show lightbox of really big version
 			$cover.fadeIn('fast');
