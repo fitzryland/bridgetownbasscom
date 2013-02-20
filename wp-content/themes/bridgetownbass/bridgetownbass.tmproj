@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>style.scss</string>
+	<string>single.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -76,14 +76,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>36</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>53</integer>
+				<integer>27</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>30</integer>
+			<integer>37</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>199</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>27</integer>
+			</dict>
 		</dict>
 		<key>js/site.js</key>
 		<dict>
@@ -92,12 +108,12 @@
 				<key>column</key>
 				<integer>31</integer>
 				<key>line</key>
-				<integer>104</integer>
+				<integer>82</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>67</integer>
+			<integer>74</integer>
 		</dict>
 		<key>notes.txt</key>
 		<dict>
@@ -129,24 +145,39 @@
 				<integer>188</integer>
 			</dict>
 		</dict>
+		<key>single.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>43</integer>
+				<key>line</key>
+				<integer>83</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>51</integer>
+		</dict>
 		<key>style.scss</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>9</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>505</integer>
+				<integer>21</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>464</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>index.php</string>
+		<string>single.php</string>
 		<string>footer.php</string>
 		<string>header.php</string>
 		<string>style.scss</string>
@@ -157,6 +188,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<false/>
 	<key>windowFrame</key>
-	<string>{{396, 4}, {1044, 874}}</string>
+	<string>{{591, 4}, {845, 874}}</string>
 </dict>
 </plist>

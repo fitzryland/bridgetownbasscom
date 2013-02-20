@@ -348,7 +348,7 @@ h2.venue:hover {
 
 .meta {
   display-style-type: none;
-  margin: 0 0 2.5em;
+  margin: 0;
   padding: 0; }
   .meta li {
     display: inline;

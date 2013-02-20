@@ -1,0 +1,184 @@
+<?php
+// Date
+$dateRaw = get_field('date');
+$dateArray = explode('/',$dateRaw);
+$year = $dateArray[0];
+$monthNum = $dateArray[1];
+$monthName = date("M", mktime(0, 0, 0, $monthNum, 10));
+$day = date("j",strtotime($dateRaw));
+$dayOfWeek = date("D",strtotime($dateRaw));
+// Photo
+$photoMeta = get_field('photo');
+$photoURL = $photoMeta['sizes']['medium'];
+
+$lrgEventImgURLs[] = $photoMeta['sizes']['large'];
+
+$photoAlt = $photoMeta['alt'];
+// Venue & Musicians
+$stdVen = get_the_terms($post->ID, 'venues');
+$ven = get_object_vars($stdVen[0]);
+$taxAndIDmusic = "artist_" . $ar['term_id'];
+$taxAndVenID = "venues_" . $ven['term_id'];
+$venCalendarURL = get_field('calendar_url', $taxAndVenID);
+$venTwitterURL = get_field('twitter_url', $taxAndVenID);
+$venFacebookURL = get_field('facebook_url', $taxAndVenID);
+$venMapURL = get_field('map_url', $taxAndVenID);
+$venName = $ven['name'];
+$venImg = get_field('image', $taxAndVenID);
+// Meta
+$highlight = get_field('highlight');
+$rsvp = get_field('rsvp');
+$ticketLink = get_field('ticket_link');
+?>
+<article <?php
+if ($highlight == 'Yes') {
+	echo "class=\"group highlight\"";
+} else {
+	echo "class=\"group\"";
+}
+?>>
+	<!--<div class="readable">-->
+		<?php
+		
+//		echo "Current Time: " . "</br>" . date("D M d, Y G:i a", $curTime) . "</br>" . "</br>";
+		
+//		echo "Expiration Time: " . "</br>" . date("D M d, Y G:i a", $post->TIMESTAMP) . "</br>" . "</br>";
+		
+		?>
+	<!--</div>-->
+	<div class="static">
+		<div class="date">
+			<span class="dw"><?php echo $dayOfWeek; ?></span>
+			<span class="m"><?php echo $monthName; ?></span>
+			<span class="d"><?php echo $day; ?></span>
+			<span class="y"><?php echo $year; ?></span>
+		</div>
+		<h2 class="venue"><?php echo $venName; ?></h2>
+		<?php
+		foreach (get_the_terms($post->ID, 'artist') as $i=>$stdArt) {
+			$ar = get_object_vars($stdArt);
+			$artistName = $ar['name'];
+			?>
+			<h2 class="<?php echo "artistMeta" . $i; ?>"><?php echo $artistName; ?></h2>
+			<?php
+		}; 
+		?>
+		<ul class="meta">
+			<?php if ($ticketLink) { ?>
+			<li>
+				<a href="<?php echo $ticketLink; ?>" target="_new">Tickets</a>
+			</li>
+			<?php }; ?>
+			<?php if ($rsvp) { ?>
+			<li>
+				<a href="<?php echo $rsvp; ?>">RSVP</a>
+			</li>
+			<?php }; ?>
+		</ul>
+		<h2 class="share">share</h2>
+	</div>
+	<div class="flip">
+		<img class="poster big" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>"/>
+		<div class="arrow"></div>
+		<div class="panelWrap">
+			<div class="panel venue">
+				<?php if ($venCalendarURL) { ?>
+					<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
+						<h1><?php echo $venName; ?></h1>
+					</a>
+				<?php } else { ?>
+					<h1><?php echo $venName; ?></h1>
+				<?php }; ?>
+				<img class="venImg" src="<?php echo $venImg['sizes']['artist-img']; ?>">
+				<div class="social">
+					<?php if ($venTwitterURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $venTwitterURL; ?>" target="_new" title="">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="t"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($venFacebookURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $venFacebookURL; ?>" target="_new" title="">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="f"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($venMapURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $venMapURL; ?>" target="_new" title="">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="ma"/>
+							</a>
+						</div>
+					<?php }; ?>
+				</div>
+			</div>
+			<?php
+			foreach (get_the_terms($post->ID, 'artist') as $i=>$stdArt) {
+				$ar = get_object_vars($stdArt);
+				$artistName = $ar['name'];
+				$taxAndIDmusic = "artist_" . $ar['term_id'];
+				$artistMusicURL = get_field('music_url', $taxAndIDmusic);
+				$artistTwitterURL = get_field('twitter_url', $taxAndIDmusic);
+				$artistPhoto = get_field('artist_photo', $taxAndIDmusic);
+				$artistFacebookURL = get_field('facebook_url', $taxAndIDmusic);
+				$artistMyspaceURL = get_field('myspace_url', $taxAndIDmusic);
+				$artistWebURL = get_field('web_url', $taxAndIDmusic);
+				?>
+			<div class="panel artist <?php echo "artistMeta" . $i; ?>">
+				<?php if ($artistWebURL) { ?>
+					<a href="<?php echo $artistWebURL; ?>" target="_new">
+						<h1><?php echo $artistName; ?></h1>
+					</a>
+				<?php } else { ?>
+					<h1><?php echo $artistName; ?></h1>
+				<?php }; ?>
+				<img src="<?php echo $artistPhoto['sizes']['artist-img']; ?>" class="artistImg"/>
+				<div class="social">
+					<!--
+					- Max Three
+					
+					-->
+					<?php if ($artistMusicURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $artistMusicURL; ?>" target="_new">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="s"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($artistTwitterURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $artistTwitterURL; ?>" target="_new">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="t"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($artistFacebookURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $artistFacebookURL; ?>" target="_new">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="f"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($artistMusicURL && $artistTwitterURL && $artistFacebookURL) {} elseif ($artistMyspaceURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $artistMyspaceURL; ?>" target="_new">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="m"/>
+							</a>
+						</div>
+					<?php }; ?>
+				</div>
+			</div>
+				<?php
+			}; 
+			?>
+			<div class="panel">
+				<h1>Share This Event</h1>
+				<p>Share the permalink to the event via facebook, twitter, pinterest?, tumblr?, and email. Also have an easily copied link and a clickable link.</p>
+				<a href="<?php the_permalink(); ?>">permalink</a>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</article>
