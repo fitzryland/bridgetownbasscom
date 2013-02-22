@@ -63,7 +63,7 @@ ORDER BY wp_postmeta.meta_value ASC
 
 
 - CoAg - 192.168.88.110
-- Bohemia - 192.168.1.11
+- Home - 192.168.1.11
 
 
 

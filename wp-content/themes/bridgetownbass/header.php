@@ -35,7 +35,7 @@
 	<body <?php body_class(); ?>>
 		<div id="cover"></div>
 		<div class="fixed"></div>
-		<header id="header">
+		<header>
 			<img src="<?php echo get_template_directory_uri(); ?>/images/BTBLogo0_2.png" width="500" height="382" alt="BTBLogo" class="logo">
 			<h1>
 				<!--<a href="<?php// echo home_url(); ?>"><span id="bridge">BRIDGE</span></br><span id="town">TOWN</span></br><span id="bass">BASS</span></a>-->
