@@ -112,56 +112,35 @@ header {
   background-image: url(images/articleBG_1.gif);
   font-size: 15px;
   margin: 0 auto;
-  padding-top: 1em;
+  padding-top: 0.5em;
   position: relative;
   text-align: center; }
   header h1 {
-    color: #00dfff;
-    margin: 0 0 0 -0.7em;
-    position: relative;
     text-align: center;
+    font-size: 5em;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
     z-index: 0; }
-    header h1 a:link, header h1 a:visited {
-      color: #00dfff; }
+    header h1 a:hover, header h1 a:active {
+      color: #aa3fff; }
 
-#menu-main-nav {
+.menu-main-nav-container ul {
+  margin: 0;
   padding: 0;
   list-style-type: none;
   z-index: 1000; }
-  #menu-main-nav h1 {
+  .menu-main-nav-container ul h1 {
     z-index: 1100; }
-  #menu-main-nav li:first-child {
-    font-size: 6.6em;
-    left: -1.5em;
-    position: absolute;
-    top: 1.3em;
-    transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-90deg);
-    /* Safari and Chrome */
-    -o-transform: rotate(-90deg);
-    /* Opera */
-    -moz-transform: rotate(-90deg);
-    /* Firefox */ }
-  #menu-main-nav li:last-child {
-    font-size: 8.1em;
-    position: absolute;
-    left: 2.2em;
-    top: 0.9em;
-    transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    /* IE 9 */
-    -webkit-transform: rotate(90deg);
-    /* Safari and Chrome */
-    -o-transform: rotate(90deg);
-    /* Opera */
-    -moz-transform: rotate(90deg);
-    /* Firefox */ }
-
-.menu-main-nav-container {
-  position: absolute;
-  top: 0; }
+  .menu-main-nav-container ul li {
+    display: inline;
+    font-size: 4.8em;
+    line-height: 1em;
+    z-index: 900; }
+    .menu-main-nav-container ul li a:link, .menu-main-nav-container ul li a:visited {
+      color: #00dfff; }
+    .menu-main-nav-container ul li a:hover, .menu-main-nav-container ul li a:active {
+      color: #ff9f00; }
 
 #bridge, #town, #bass {
   line-height: .8em; }
@@ -407,10 +386,14 @@ h1._404 {
   header {
     font-size: 16px; }
     header h1 {
-      font-size: 1.9em;
+      font-size: 3em;
       margin: 0; }
-    header .menu-main-nav-container {
-      display: none; }
+    header .menu-main-nav-container ul li {
+      font-size: 2.9em; }
+
+  .logo {
+    height: 241.424px;
+    width: 316px; }
 
   article:before {
     display: none;
