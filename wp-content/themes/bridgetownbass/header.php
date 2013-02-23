@@ -36,7 +36,7 @@
 		<div id="cover"></div>
 		<div class="fixed"></div>
 		<header>
-			<img src="<?php echo get_template_directory_uri(); ?>/images/BTBLogo0_2.png" width="500" height="382" alt="BTBLogo" class="logo">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/btbheaderlogo0_4.gif" width="500" height="383" alt="BTB Logo" class="logo">
 			<h1>
 				<!--<a href="<?php// echo home_url(); ?>"><span id="bridge">BRIDGE</span></br><span id="town">TOWN</span></br><span id="bass">BASS</span></a>-->
 				<a href="<?php // echo home_url(); ?>">BRIDGETOWNBASS</a>
