@@ -123,6 +123,8 @@ header {
     margin: 0;
     padding: 0;
     z-index: 0; }
+    header h1 a:link, header h1 a:visited {
+      color: #aa3fff; }
     header h1 a:hover, header h1 a:active {
       color: #aa3fff; }
 

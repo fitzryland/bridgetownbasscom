@@ -80,7 +80,7 @@ $(document).ready(function() {
 				// 	width: wid,
 				// 	height: hi
 				// });
-			}
+			}n
 		}
 	});
 	$('.arrow').click(function() {
@@ -88,9 +88,9 @@ $(document).ready(function() {
 		backToPoster(x);
 	});
 	// what happens when you click a .poster?
-	$poster.click(function() {
+	$posters.click(function() {
 		if ($(this).hasClass('big')) {
-			var i = $poster.index(this),
+			var i = $posters.index(this),
 				$cover = $('#cover');
 			// show lightbox of really big version
 			$cover.fadeIn('fast');
@@ -130,7 +130,7 @@ $(document).ready(function() {
 		} else {
 			i = i + 1;
 		}
-	},150);
+	},300);
 	
 	// Social Share Buttons
 	// Twitter
