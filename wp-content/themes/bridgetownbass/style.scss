@@ -497,9 +497,10 @@ h1._404 {
 	}
 	
 	.logo {
+		margin:0 auto;
 		// h/w = nh/ws
 		// width="500" height="382"
-		height:(382/500) * $widthSmall;
+		height:(570/498) * $widthSmall;
 		width:$widthSmall;
 	}
 	article {
