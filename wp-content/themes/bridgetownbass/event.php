@@ -47,13 +47,6 @@ if ($highlight == 'Yes') {
 		?>
 	<!--</div>-->
 	<div class="static">
-		<div class="date">
-			<span class="dw"><?php echo $dayOfWeek; ?></span>
-			<span class="m"><?php echo $monthName; ?></span>
-			<span class="d"><?php echo $day; ?></span>
-			<span class="y"><?php echo $year; ?></span>
-		</div>
-		<h2 class="venue"><?php echo $venName; ?></h2>
 		<?php
 		foreach (get_the_terms($post->ID, 'artist') as $i=>$stdArt) {
 			$ar = get_object_vars($stdArt);
@@ -63,6 +56,10 @@ if ($highlight == 'Yes') {
 			<?php
 		}; 
 		?>
+		<h2 class="venue"><?php echo $venName; ?></h2>
+		<div class="date">
+			<?php echo $dayOfWeek; ?> <?php echo $monthName; ?> <?php echo $day; ?>
+		</div>
 		<ul class="meta">
 			<?php if ($ticketLink) { ?>
 			<li>
@@ -75,45 +72,11 @@ if ($highlight == 'Yes') {
 			</li>
 			<?php }; ?>
 		</ul>
-		<h2 class="share">share</h2>
 	</div>
 	<div class="flip">
 		<img class="poster big" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>"/>
 		<div class="arrow"></div>
 		<div class="panelWrap">
-			<div class="panel venue">
-				<?php if ($venCalendarURL) { ?>
-					<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
-						<h1><?php echo $venName; ?></h1>
-					</a>
-				<?php } else { ?>
-					<h1><?php echo $venName; ?></h1>
-				<?php }; ?>
-				<img class="venImg" src="<?php echo $venImg['sizes']['artist-img']; ?>">
-				<div class="social">
-					<?php if ($venTwitterURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $venTwitterURL; ?>" target="_new" title="">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="t"/>
-							</a>
-						</div>
-					<?php }; ?>
-					<?php if ($venFacebookURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $venFacebookURL; ?>" target="_new" title="">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="f"/>
-							</a>
-						</div>
-					<?php }; ?>
-					<?php if ($venMapURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $venMapURL; ?>" target="_new" title="">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="ma"/>
-							</a>
-						</div>
-					<?php }; ?>
-				</div>
-			</div>
 			<?php
 			foreach (get_the_terms($post->ID, 'artist') as $i=>$stdArt) {
 				$ar = get_object_vars($stdArt);
@@ -136,10 +99,6 @@ if ($highlight == 'Yes') {
 				<?php }; ?>
 				<img src="<?php echo $artistPhoto['sizes']['artist-img']; ?>" class="artistImg"/>
 				<div class="social">
-					<!--
-					- Max Three
-					
-					-->
 					<?php if ($artistMusicURL) { ?>
 						<div class="icon">
 							<a href="<?php echo $artistMusicURL; ?>" target="_new">
@@ -173,11 +132,40 @@ if ($highlight == 'Yes') {
 				<?php
 			}; 
 			?>
-			<div class="panel">
-				<h1>Share This Event</h1>
-				<p>Share the permalink to the event via facebook, twitter, pinterest?, tumblr?, and email. Also have an easily copied link and a clickable link.</p>
-				<a href="<?php the_permalink(); ?>">permalink</a>
-				<a class="twitter popup" href="http://twitter.com/share?text=This%20is%20so%20easy">Tweet</a>
+			
+			
+			<div class="panel venue">
+				<?php if ($venCalendarURL) { ?>
+					<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
+						<h1><?php echo $venName; ?></h1>
+					</a>
+				<?php } else { ?>
+					<h1><?php echo $venName; ?></h1>
+				<?php }; ?>
+				<img class="venImg" src="<?php echo $venImg['sizes']['artist-img']; ?>">
+				<div class="social">
+					<?php if ($venTwitterURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $venTwitterURL; ?>" target="_new" title="">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="t"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($venFacebookURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $venFacebookURL; ?>" target="_new" title="">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="f"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($venMapURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $venMapURL; ?>" target="_new" title="">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="ma"/>
+							</a>
+						</div>
+					<?php }; ?>
+				</div>
 			</div>
 		</div>
 	</div>

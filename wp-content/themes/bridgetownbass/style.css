@@ -230,15 +230,7 @@ article:after {
     position: absolute;
     height: 0;
     width: 0;
-    z-index: 1001;
-    -webkit-animation: bounce 1s infinite;
-    /* Safari 4+ */
-    -moz-animation: bounce 1s infinite;
-    /* Fx 5+ */
-    -o-animation: bounce 1s infinite;
-    /* Opera 12+ */
-    animation: bounce 1s infinite;
-    /* IE 10+ */ }
+    z-index: 1001; }
   .flip .live:hover {
     border-bottom-color: #00dfff;
     cursor: pointer; }
@@ -273,11 +265,10 @@ article:after {
   z-index: 100; }
   .static h2 {
     clear: both;
-    color: #aa3fff;
-    font-size: 1.6em;
+    color: #00dfff;
+    font-size: 1.7em;
     margin: 0;
-    position: relative;
-    text-align: center; }
+    position: relative; }
   .static h2:hover {
     color: #ff9f00;
     cursor: pointer; }
@@ -307,21 +298,14 @@ article:after {
 
 .date {
   color: #ff9f00;
+  font-size: 1.4em;
   text-align: center;
+  text-transform: uppercase;
   width: 100%; }
-  .date span {
-    display: block;
-    font-size: 3em;
-    line-height: 1em;
-    text-transform: uppercase; }
-  .date .m, .date .d {
-    display: inline;
-    font-size: 2em;
-    text-transform: uppercase; }
 
 h2.venue {
-  color: #00dfff;
-  font-size: 2em;
+  color: #aa3fff;
+  font-size: 1.6em;
   text-align: center; }
 
 h2.venue:hover {
