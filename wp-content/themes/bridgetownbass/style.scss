@@ -11,9 +11,16 @@ $breakSmall: 600px;
 $widthSmall: 316px;
 
 
-$blue:#00dfff;
-$purple:#aa3fff;
-$orange:#ff9f00;
+$blue:#00dfff; // HSL 188, 100, 50
+$purple:#aa3fff; // HSL 273, 100, 62
+$orange:#ff9f00; // HSL 37, 100, 50
+//$orange:#FFFF00; // HSL 64, 100, 50 - Yellow
+
+// Middle of 188 & 273
+// [(273-188)/2]+188 = 230.5
+// find opposite of 230.5
+// 230.5-180 = 50.5
+// 50.5+(50.5-37) = 64
 
 @-webkit-keyframes bounce {
 	0%		{ margin-bottom:0em; }
@@ -500,7 +507,7 @@ h1._404 {
 		margin:0 auto;
 		// h/w = nh/ws
 		// width="500" height="382"
-		height:(570/498) * $widthSmall;
+		height:(447/498) * $widthSmall;
 		width:$widthSmall;
 	}
 	article {

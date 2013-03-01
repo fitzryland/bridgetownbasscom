@@ -80,7 +80,7 @@ $(document).ready(function() {
 				// 	width: wid,
 				// 	height: hi
 				// });
-			}n
+			}
 		}
 	});
 	$('.arrow').click(function() {
@@ -131,28 +131,6 @@ $(document).ready(function() {
 			i = i + 1;
 		}
 	},300);
-	
-	// Social Share Buttons
-	// Twitter
-	$('.popup').click(function(e) {
-		e.preventDefault();
-		var width  = 575,
-		height = 400,
-		left   = ($(window).width()  - width)  / 2,
-		top    = ($(window).height() - height) / 2,
-		url    = this.href,
-		opts   = 'status=1' +
-			',width='  + width  +
-			',height=' + height +
-			',top='    + top    +
-			',left='   + left;
-		
-		window.open(url);
-		
-		return false;
-	});
-	
-	
 	
 	
 	
