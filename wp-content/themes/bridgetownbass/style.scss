@@ -112,6 +112,12 @@ header {
 		}
 	}
 }
+.logo, .logomobile {
+	margin:0 auto;
+}
+.logomobile {
+	display:none;
+}
 .menu-main-nav-container {
 //	position:absolute;
 //	top:0;
@@ -465,11 +471,10 @@ h1._404 {
 	}
 	
 	.logo {
-		margin:0 auto;
-		// h/w = nh/ws
-		// width="500" height="382"
-		height:(447/498) * $widthSmall;
-		width:$widthSmall;
+		display:none;
+	}
+	.logomobile {
+		display:inline;
 	}
 	article {
 //		background-image:url('images/articleBGAnimated_0.gif');

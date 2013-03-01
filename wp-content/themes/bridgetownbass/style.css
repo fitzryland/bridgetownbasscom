@@ -87,6 +87,12 @@ header {
     header h1 a:hover, header h1 a:active {
       color: #aa3fff; }
 
+.logo, .logomobile {
+  margin: 0 auto; }
+
+.logomobile {
+  display: none; }
+
 .menu-main-nav-container ul {
   margin: 0;
   padding: 0;
@@ -340,9 +346,10 @@ h1._404 {
       font-size: 2.9em; }
 
   .logo {
-    margin: 0 auto;
-    height: 283.63855px;
-    width: 316px; }
+    display: none; }
+
+  .logomobile {
+    display: inline; }
 
   article:before {
     display: none;
