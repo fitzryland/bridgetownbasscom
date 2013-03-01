@@ -22,26 +22,6 @@ $orange:#ff9f00; // HSL 37, 100, 50
 // 230.5-180 = 50.5
 // 50.5+(50.5-37) = 64
 
-@-webkit-keyframes bounce {
-	0%		{ margin-bottom:0em; }
-	50%		{ margin-bottom:-0.5em; }
-	100%	{ margin-bottom:0em; }
-}
-@-moz-keyframes bounce {
-	0%		{ margin-bottom:0em; }
-	50%		{ margin-bottom:-0.5em; }
-	100%	{ margin-bottom:0em; }
-}
-@-o-keyframes bounce {
-	0%		{ margin-bottom:0em; }
-	50%		{ margin-bottom:-0.5em; }
-	100%	{ margin-bottom:0em; }
-}
-@keyframes bounce {
-	0%		{ margin-bottom:0em; }
-	50%		{ margin-bottom:-0.5em; }
-	100%	{ margin-bottom:0em; }
-}
 
 /*										1. *general
 */
@@ -199,7 +179,7 @@ article {
 	background-image:url('images/articleBG_1.gif');
 	border:0.5em solid $orange;
 	margin:0 0 1em;
-	padding-right:1em;
+//	padding-right:1em;
 	position:relative;
 	z-index:50;
 }
@@ -265,10 +245,6 @@ article:after {
 	}
 	img.small {
 		border-top: 0.5em solid $orange;
-//		border-right: 0.5em solid $orange;
-//		border-left: 0.5em solid transparent;
-//		border-bottom: 0.5em solid transparent;
-//		margin:0 0 -0.5em -0.5em;
 	}
 	img.small:after {
 		content:"BOOM";
@@ -294,11 +270,6 @@ article:after {
 		height:0;
 		width:0;
 		z-index:1001;
-		
-//		-webkit-animation: bounce 1s infinite; /* Safari 4+ */
-//		-moz-animation:    bounce 1s infinite; /* Fx 5+ */
-//		-o-animation:      bounce 1s infinite; /* Opera 12+ */
-//		animation:         bounce 1s infinite; /* IE 10+ */
 	}
 	.live:hover {
 		border-bottom-color:$blue;
@@ -335,7 +306,7 @@ article:after {
 .static {
 	text-align:center;
 	float:right;
-	width:160px;
+	width:184px; // 500 - 16 - 300 
 	z-index:100;
 	h2 {
 		clear:both;
@@ -353,7 +324,7 @@ article:after {
 		border-top:0.4em solid transparent;
 		border-bottom:0.4em solid transparent;
 		border-left:0.4em solid $orange;
-		left:-0.4em;
+		left:0em;
 		position:absolute;
 		top:0.4em;
 		height:0;
@@ -368,7 +339,7 @@ article:after {
 		border-top:0.4em solid transparent;
 		border-bottom:0.4em solid transparent;
 		border-left:0.4em solid $orange;
-		left:-0.4em;
+		left:0em;
 		position:absolute;
 		top:0.4em;
 		height:0;

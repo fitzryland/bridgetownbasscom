@@ -6,46 +6,6 @@ Version: 		0.1
 Author: 		Fitz Ryland
 Author URI: 	http://FitzhughRyland.com
 */
-@-webkit-keyframes bounce {
-  0% {
-    margin-bottom: 0em; }
-
-  50% {
-    margin-bottom: -0.5em; }
-
-  100% {
-    margin-bottom: 0em; } }
-
-@-moz-keyframes bounce {
-  0% {
-    margin-bottom: 0em; }
-
-  50% {
-    margin-bottom: -0.5em; }
-
-  100% {
-    margin-bottom: 0em; } }
-
-@-o-keyframes bounce {
-  0% {
-    margin-bottom: 0em; }
-
-  50% {
-    margin-bottom: -0.5em; }
-
-  100% {
-    margin-bottom: 0em; } }
-
-@keyframes bounce {
-  0% {
-    margin-bottom: 0em; }
-
-  50% {
-    margin-bottom: -0.5em; }
-
-  100% {
-    margin-bottom: 0em; } }
-
 /*										1. *general
 */
 .clear {
@@ -164,7 +124,6 @@ article {
   background-image: url("images/articleBG_1.gif");
   border: 0.5em solid #ff9f00;
   margin: 0 0 1em;
-  padding-right: 1em;
   position: relative;
   z-index: 50; }
 
@@ -261,7 +220,7 @@ article:after {
 .static {
   text-align: center;
   float: right;
-  width: 160px;
+  width: 184px;
   z-index: 100; }
   .static h2 {
     clear: both;
@@ -277,7 +236,7 @@ article:after {
     border-top: 0.4em solid transparent;
     border-bottom: 0.4em solid transparent;
     border-left: 0.4em solid #ff9f00;
-    left: -0.4em;
+    left: 0em;
     position: absolute;
     top: 0.4em;
     height: 0;
@@ -290,7 +249,7 @@ article:after {
     border-top: 0.4em solid transparent;
     border-bottom: 0.4em solid transparent;
     border-left: 0.4em solid #ff9f00;
-    left: -0.4em;
+    left: 0em;
     position: absolute;
     top: 0.4em;
     height: 0;
