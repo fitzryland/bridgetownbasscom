@@ -93,22 +93,24 @@ header {
 .logomobile {
   display: none; }
 
-.menu-main-nav-container ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  z-index: 1000; }
-  .menu-main-nav-container ul h1 {
-    z-index: 1100; }
-  .menu-main-nav-container ul li {
-    display: inline;
-    font-size: 4.8em;
-    line-height: 1em;
-    z-index: 900; }
-    .menu-main-nav-container ul li a:link, .menu-main-nav-container ul li a:visited {
-      color: #00dfff; }
-    .menu-main-nav-container ul li a:hover, .menu-main-nav-container ul li a:active {
-      color: #ff9f00; }
+.menu-main-nav-container {
+  margin-bottom: 0.3em; }
+  .menu-main-nav-container ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    z-index: 1000; }
+    .menu-main-nav-container ul h1 {
+      z-index: 1100; }
+    .menu-main-nav-container ul li {
+      display: inline;
+      font-size: 4.8em;
+      line-height: 1em;
+      z-index: 900; }
+      .menu-main-nav-container ul li a:link, .menu-main-nav-container ul li a:visited {
+        color: #00dfff; }
+      .menu-main-nav-container ul li a:hover, .menu-main-nav-container ul li a:active {
+        color: #ff9f00; }
 
 #bridge, #town, #bass {
   line-height: .8em; }
