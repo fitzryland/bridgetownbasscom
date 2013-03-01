@@ -278,6 +278,7 @@ h2.venue:hover {
 
 .meta {
   display-style-type: none;
+  font-size: 1.2em;
   margin: 0;
   padding: 0; }
   .meta li {
@@ -285,8 +286,6 @@ h2.venue:hover {
     margin: 0;
     padding: 0;
     vertical-align: middle; }
-  .meta li:nth-last-child(2) {
-    font-size: 1.2em; }
   .meta a:link, .meta a:visited {
     color: #00dfff; }
   .meta a:hover, .meta a:active {
