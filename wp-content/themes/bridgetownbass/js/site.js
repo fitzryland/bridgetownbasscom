@@ -119,6 +119,7 @@ $(document).ready(function() {
 	});
 	// Border Color Rotation
 	var i = 0,
+		speed = 800,
 		colors = new Array("#00dfff","#aa3fff","#ff9f00"),
 		$highlights = $('article.highlight');
 	setInterval(function() {
@@ -130,7 +131,7 @@ $(document).ready(function() {
 		} else {
 			i = i + 1;
 		}
-	},300);
+	},speed);
 	
 	
 	
