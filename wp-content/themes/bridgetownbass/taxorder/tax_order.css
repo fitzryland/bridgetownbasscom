@@ -9,6 +9,9 @@
   .taxbox ul:first-child {
     float: left;
     width: 30%; }
+    .taxbox ul:first-child li:hover {
+      cursor: pointer;
+      text-decoration: underline; }
   .taxbox ul:last-child {
     background-color: #e7e7e7;
     float: right;

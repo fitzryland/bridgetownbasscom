@@ -17,6 +17,12 @@ $darkGray:#686868;
 	ul:first-child {
 		float:left;
 		width:30%;
+		li {
+			&:hover {
+				cursor:pointer;
+				text-decoration:underline;
+			}
+		}
 	}
 	ul:last-child {
 		background-color:$gray;

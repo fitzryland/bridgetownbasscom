@@ -99,10 +99,11 @@ class Tax_order extends acf_Field
 			<ul id="taxpool">
 			<?php
 			foreach ($taxs as $tax) {
-				echo "<li class=\"" . $tax->term_id . "\">" . $tax->name . "</li>";
+				echo "<li id=\"" . $tax->term_id . "\">" . $tax->name . "</li>";
 			}
 			?>
 			</ul> <!--#taxpool-->
+<!--			<div id="clickclack">CLICKCLACK</div>-->
 			<ul id="taxsort">
 				<li class="empty">add some <?php echo $tax_name; ?>s</li>
 			</ul>
