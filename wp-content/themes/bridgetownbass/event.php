@@ -17,7 +17,13 @@ $photoAlt = $photoMeta['alt'];
 // Venue & Musicians
 $stdVen = get_the_terms($post->ID, 'venues');
 $ven = get_object_vars($stdVen[0]);
-$taxAndIDmusic = "artist_" . $ar['term_id'];
+
+// NEW ARTIST INFO
+$rawArtistList = get_field('artists');
+$rawArtistList = str_replace("'", "\"", $rawArtistList);
+$artistsArray = json_decode($rawArtistList, true);
+
+
 $taxAndVenID = "venues_" . $ven['term_id'];
 $venCalendarURL = get_field('calendar_url', $taxAndVenID);
 $venTwitterURL = get_field('twitter_url', $taxAndVenID);
@@ -47,15 +53,29 @@ if ($highlight == 'Yes') {
 		?>
 	<!--</div>-->
 	<div class="static">
+		<!-- START NEW ARTIST THANG -->
+		<?php 
+		foreach ($artistsArray as $artID) {
+			$art = get_term($artID, 'artist');
+			echo "<h2>" . $art->name . "</h2>";
+		};
+		?>
+		<!-- END NEW ARTIST THANG -->
+		
+		<!-- START OLD ARTIST THANG -->
 		<?php
 		foreach (get_the_terms($post->ID, 'artist') as $i=>$stdArt) {
 			$ar = get_object_vars($stdArt);
 			$artistName = $ar['name'];
 			?>
-			<h2 class="<?php echo "artistMeta" . $i; ?>"><?php echo $artistName; ?></h2>
+			<!-- <h2 class="<?php // echo "artistMeta" . $i; ?>"><?php // echo $artistName; ?></h2> -->
 			<?php
 		}; 
 		?>
+		<!-- END OLD ARTIST THANG -->
+		
+		
+		
 		<h2 class="venue"><?php echo $venName; ?></h2>
 		<div class="date">
 			<?php echo $dayOfWeek; ?> <?php echo $monthName; ?> <?php echo $day; ?>
@@ -78,10 +98,10 @@ if ($highlight == 'Yes') {
 		<div class="arrow"></div>
 		<div class="panelWrap">
 			<?php
-			foreach (get_the_terms($post->ID, 'artist') as $i=>$stdArt) {
-				$ar = get_object_vars($stdArt);
-				$artistName = $ar['name'];
-				$taxAndIDmusic = "artist_" . $ar['term_id'];
+			foreach ($artistsArray as $artID) {
+				$art = get_term($artID, 'artist');
+				$artistName = $art->name;
+				$taxAndIDmusic = "artist_" . $artID;
 				$artistMusicURL = get_field('music_url', $taxAndIDmusic);
 				$artistTwitterURL = get_field('twitter_url', $taxAndIDmusic);
 				$artistPhoto = get_field('artist_photo', $taxAndIDmusic);
@@ -89,7 +109,7 @@ if ($highlight == 'Yes') {
 				$artistMyspaceURL = get_field('myspace_url', $taxAndIDmusic);
 				$artistWebURL = get_field('web_url', $taxAndIDmusic);
 				?>
-			<div class="panel artist <?php echo "artistMeta" . $i; ?>">
+			<div class="panel artist">
 				<?php if ($artistWebURL) { ?>
 					<a href="<?php echo $artistWebURL; ?>" target="_new">
 						<h1><?php echo $artistName; ?></h1>
