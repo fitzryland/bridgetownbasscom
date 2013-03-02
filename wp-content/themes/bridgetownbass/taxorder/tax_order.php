@@ -1,7 +1,7 @@
 <?php
 
 /*
- *	Advanced Custom Fields - New field template
+ *	Advanced Custom Fields - Fitz's Sortable Taxonimies
  *	
  *	Create your field's functionality below and use the function:
  *	register_field($class_name, $file_path) to include the field
@@ -93,22 +93,33 @@ class Tax_order extends acf_Field
 	{
 		$tax_name = 'artist';
 		$taxs = get_categories(array('taxonomy' => $tax_name));
-//		print_a($taxs);
+		$rawJSON = $field['value'];
+		$rawJSON = str_replace("'", "\"", $rawJSON);
+		$saved_taxs = json_decode($rawJSON, true);
 		?>
 		<div class="taxbox group">
 			<ul id="taxpool">
 			<?php
 			foreach ($taxs as $tax) {
-				echo "<li id=\"" . $tax->term_id . "\">" . $tax->name . "</li>";
+				if (!in_array($tax->term_id, $saved_taxs)) {
+					echo "<li id=\"" . $tax->term_id . "\">" . $tax->name . "</li>";
+				}
 			}
 			?>
 			</ul> <!--#taxpool-->
-			<div id="clickclack">CLICKCLACK</div>
+			<!-- <div id="clickclack">CLICKCLACK</div> -->
 			<?php
 			echo '<input type="hidden" value="' . $field['value'] . '" id="' . $field['id'] . '" class="' . $field['class'] . '" name="' . $field['name'] . '" />'; 
 			?>
 			<ul id="taxsort">
-				<li class="empty">add some <?php echo $tax_name; ?>s</li>
+				<?php if ($saved_taxs) {
+					foreach ($saved_taxs as $staxID) {
+						$stax = get_term($staxID, $tax_name);
+						echo "<li id=\"{$staxID}\">" . $stax->name . "<span>X</span></li>";
+					}
+				} else { ?>
+					<li class="empty">add some <?php echo $tax_name; ?>s</li>
+				<?php } ?>
 			</ul>
 		</div><!--.taxbox-->
 		<script type="text/javascript">

@@ -2,13 +2,14 @@ $(document).ready(function() {
 	"use strict";
 	var $taxsort = $('#taxsort'),
 		$input = $('.taxbox input');
-	$('#taxsort').on("click", "li span", function() {
+	$taxsort.on("click", "li span", function() {
 		var $li = $(this).parents("li");
+		$li.find('span').remove();
 		$('#taxpool').append($li.clone());
 		$li.remove();
 		updateJSON();
 	});
-	$('#taxpool li').on("click", function() {
+	$('#taxpool').on("click", "li", function() {
 		if ($('li.empty')) {
 			$('li.empty').remove();
 		}
@@ -17,13 +18,16 @@ $(document).ready(function() {
 		$taxsort.append($newTax);
 		updateJSON();
 	});
-	$('#clickclack').click(function() {
+	$taxsort.on("sortupdate", function() {
 		updateJSON();
 	});
+	// $('#clickclack').click(function() {
+	// 	updateJSON();
+	// });
 	function updateJSON() {
 		var idarray = $( "#taxsort" ).sortable( "toArray" ),
 			jsonstr = JSON.stringify(idarray).replace(/\"/g,"'");
 			$input.val(jsonstr);
-//			console.log(jsonstr);
+			console.log(jsonstr);
 	}
 });
