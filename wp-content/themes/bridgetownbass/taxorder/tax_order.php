@@ -103,7 +103,10 @@ class Tax_order extends acf_Field
 			}
 			?>
 			</ul> <!--#taxpool-->
-<!--			<div id="clickclack">CLICKCLACK</div>-->
+			<div id="clickclack">CLICKCLACK</div>
+			<?php
+			echo '<input type="hidden" value="' . $field['value'] . '" id="' . $field['id'] . '" class="' . $field['class'] . '" name="' . $field['name'] . '" />'; 
+			?>
 			<ul id="taxsort">
 				<li class="empty">add some <?php echo $tax_name; ?>s</li>
 			</ul>
