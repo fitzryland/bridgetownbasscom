@@ -101,8 +101,10 @@ class Tax_order extends acf_Field
 			<ul id="taxpool">
 			<?php
 			foreach ($taxs as $tax) {
-				if (!in_array($tax->term_id, $saved_taxs)) {
-					echo "<li id=\"" . $tax->term_id . "\">" . $tax->name . "</li>";
+				if ($saved_taxs) {
+					if (!in_array($tax->term_id, $saved_taxs)) {
+						echo "<li id=\"" . $tax->term_id . "\">" . $tax->name . "</li>";
+					}
 				}
 			}
 			?>
