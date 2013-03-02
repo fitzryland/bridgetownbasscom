@@ -55,7 +55,8 @@ class Tax_order extends acf_Field
 	
 	function create_options($key, $field)
 	{
-		
+		// TODO
+		// need to allow choice of tax
 	}
 	
 	
@@ -90,29 +91,25 @@ class Tax_order extends acf_Field
 	
 	function create_field($field)
 	{
+		$tax_name = 'artist';
+		$taxs = get_categories(array('taxonomy' => $tax_name));
+//		print_a($taxs);
 		?>
-
-<div class="inside">
-	<div class="tagsdiv" id="artist">
-		<div class="jaxtag">
-			<div class="nojs-tags hide-if-js">
-				<p>Add or remove artists</p>
-				<textarea name="tax_input[artist]" rows="3" cols="20" class="the-tags" id="tax-input-artist"></textarea>
-			</div>
-			<div class="ajaxtag hide-if-no-js">
-				<label class="screen-reader-text" for="new-tag-artist">Artists</label>
-				<div class="taghint" style="">Add New Artists</div>
-					<p>
-						<input type="text" id="new-tag-artist" name="newtag[artist]" class="newtag form-input-tip" size="16" autocomplete="off" value="">
-						<input type="button" class="button tagadd" value="Add">
-					</p>
-				</div>
-				<p class="howto">Separate artists with commas</p>
-			</div>
-			<div class="tagchecklist"></div>
-		</div>
-	</div>
-</div>
+		<div class="taxbox group">
+			<ul id="taxpool">
+			<?php
+			foreach ($taxs as $tax) {
+				echo "<li class=\"" . $tax->term_id . "\">" . $tax->name . "</li>";
+			}
+			?>
+			</ul> <!--#taxpool-->
+			<ul id="taxsort">
+				<li class="empty">add some <?php echo $tax_name; ?>s</li>
+			</ul>
+		</div><!--.taxbox-->
+		<script type="text/javascript">
+			$('#taxsort').sortable();
+		</script>
 		<?php
 	}
 	
@@ -131,7 +128,11 @@ class Tax_order extends acf_Field
 	
 	function admin_head()
 	{
-
+		?>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/taxorder/tax_order_min.js"></script>
+		<?php
 	}
 	
 	
@@ -149,12 +150,12 @@ class Tax_order extends acf_Field
 	
 	function admin_print_scripts()
 	{
-	
+		//wp_enqueue_script('jquery-ui-timepicker', get_stylesheet_directory_uri() . '/taxorder/tax_order_min.js');
 	}
 	
 	function admin_print_styles()
 	{
-		
+		wp_enqueue_style('jquery-style', get_stylesheet_directory_uri() . '/taxorder/tax_order.css');
 	}
 
 	

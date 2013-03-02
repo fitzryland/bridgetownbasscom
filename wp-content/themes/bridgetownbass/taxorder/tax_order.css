@@ -1,0 +1,39 @@
+.taxbox {
+  border: 1px solid #e7e7e7;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  border-radius: 0.4em; }
+  .taxbox ul {
+    margin: 0;
+    padding: 1em; }
+  .taxbox ul:first-child {
+    float: left;
+    width: 30%; }
+  .taxbox ul:last-child {
+    background-color: #e7e7e7;
+    float: right;
+    width: 55%; }
+    .taxbox ul:last-child li {
+      background-color: white;
+      cursor: move;
+      padding: 0.2em;
+      position: relative; }
+      .taxbox ul:last-child li span {
+        background-color: #686868;
+        color: white;
+        content: "X";
+        cursor: pointer;
+        padding: 0 0.5em;
+        position: absolute;
+        right: 0.2em;
+        -webkit-border-radius: 1em;
+        -moz-border-radius: 1em;
+        border-radius: 1em; }
+    .taxbox ul:last-child li.empty {
+      background-color: transparent;
+      font-style: italic; }
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }

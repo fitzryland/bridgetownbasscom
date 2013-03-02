@@ -64,9 +64,8 @@
 	  ));
 	}
 	
-//	echo dirname(__File__) . '/tax_order.php';
 	/*****  Custom Taxonomy Order Stuff *****/
-	register_field('Tax_order', dirname(__File__) . '/tax_order.php');
+	register_field('Tax_order', dirname(__File__) . '/taxorder/tax_order.php');
 	
 	
 	/****** Dashboard Stuff ******/

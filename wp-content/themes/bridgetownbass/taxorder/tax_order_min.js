@@ -1,0 +1,1 @@
+$(document).ready(function(){"use strict";var e=$("#taxsort");$("#taxsort li span").on("click",function(){$(this).parents("li").remove()});$("#taxpool li").on("click",function(){$("li.empty")&&$("li.empty").remove();var t=$(this).clone().append("<span>X</span>");e.append(t)})});

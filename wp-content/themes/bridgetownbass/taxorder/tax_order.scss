@@ -1,0 +1,56 @@
+$gray:#E7E7E7;
+$darkGray:#686868;
+
+@mixin borderR($r) {
+	-webkit-border-radius: $r;
+	-moz-border-radius: $r;
+	border-radius: $r;
+}
+
+.taxbox {
+	border:1px solid $gray;
+	@include borderR(0.4em);
+	ul {
+		margin:0;
+		padding:1em;
+	}
+	ul:first-child {
+		float:left;
+		width:30%;
+	}
+	ul:last-child {
+		background-color:$gray;
+		float:right;
+		width:55%;
+		li {
+			background-color:white;
+			cursor:move;
+			padding:0.2em;
+			position:relative;
+			span {
+				background-color:$darkGray;
+				color:white;
+				content:"X";
+				cursor:pointer;
+				padding:0 0.5em;
+				position:absolute;
+				right:0.2em;
+				@include borderR(1em);
+			}
+		}
+		li.empty {
+			background-color:transparent;
+			font-style:italic;
+		}
+	}
+}
+
+#taxsort {
+	
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
