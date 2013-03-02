@@ -105,6 +105,8 @@ class Tax_order extends acf_Field
 					if (!in_array($tax->term_id, $saved_taxs)) {
 						echo "<li id=\"" . $tax->term_id . "\">" . $tax->name . "</li>";
 					}
+				} else {
+					echo "<li id=\"" . $tax->term_id . "\">" . $tax->name . "</li>";
 				}
 			}
 			?>
