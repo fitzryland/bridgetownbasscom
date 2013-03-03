@@ -92,7 +92,7 @@ class Tax_order extends acf_Field
 	function create_field($field)
 	{
 		$tax_name = 'artist';
-		$taxs = get_categories(array('taxonomy' => $tax_name, 'hide-empty' => 0));
+		$taxs = get_categories(array('taxonomy' => $tax_name, 'hide_empty' => 0));
 		$rawJSON = $field['value'];
 		$rawJSON = str_replace("'", "\"", $rawJSON);
 		$saved_taxs = json_decode($rawJSON, true);
