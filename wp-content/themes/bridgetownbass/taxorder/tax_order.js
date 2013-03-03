@@ -1,7 +1,13 @@
 $(document).ready(function() {
 	"use strict";
 	var $taxsort = $('#taxsort'),
-		$input = $('.taxbox input');
+		$input = $('.taxbox .taxorder'),
+		$search = $('#search');
+	
+	$('#taxpool li').each(function() {
+		$(this).fadeOut();
+	});
+	
 	$taxsort.on("click", "li span", function() {
 		var $li = $(this).parents("li");
 		$li.find('span').remove();
@@ -21,9 +27,30 @@ $(document).ready(function() {
 	$taxsort.on("sortupdate", function() {
 		updateJSON();
 	});
-	// $('#clickclack').click(function() {
-	// 	updateJSON();
-	// });
+	$search.keypress(function(e) {
+		if (e.which == 13) {
+			return false;
+		}
+	});
+	$search.keyup(function() {
+		var searchT = $(this).val();
+		if (searchT) {
+			$('#taxpool li').each(function() {
+				// If the list item does not contain the text phrase fade it out
+				if ($(this).text().search(new RegExp(searchT, "i")) < 0) {
+					$(this).fadeOut();
+				// Show the list item if the phrase matches and increase the count by 1
+				} else {
+					$(this).show();
+				}
+			});
+		} else {
+			$('#taxpool li').each(function() {
+				$(this).fadeOut();
+			});
+		}
+	});
+	
 	function updateJSON() {
 		var idarray = $( "#taxsort" ).sortable( "toArray" ),
 			jsonstr = JSON.stringify(idarray).replace(/\"/g,"'");

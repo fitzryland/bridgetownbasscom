@@ -98,6 +98,8 @@ class Tax_order extends acf_Field
 		$saved_taxs = json_decode($rawJSON, true);
 		?>
 		<div class="taxbox group">
+			<label for="search">Search Artists: </label>
+			<input type="text" id="search" autocomplete="off"/>
 			<ul id="taxpool">
 			<?php
 			foreach ($taxs as $tax) {

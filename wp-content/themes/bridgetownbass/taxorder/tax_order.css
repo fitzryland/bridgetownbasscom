@@ -6,10 +6,14 @@
   .taxbox ul {
     margin: 0;
     padding: 1em; }
-  .taxbox ul:first-child {
+  .taxbox #search {
+    display: block;
+    margin: 0.5em;
+    width: 30%; }
+  .taxbox ul:nth-child(3) {
     float: left;
     width: 30%; }
-    .taxbox ul:first-child li:hover {
+    .taxbox ul:nth-child(3) li:hover {
       cursor: pointer;
       text-decoration: underline; }
   .taxbox ul:last-child {
