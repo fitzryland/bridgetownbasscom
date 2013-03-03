@@ -14,22 +14,23 @@ $photoURL = $photoMeta['sizes']['medium'];
 $lrgEventImgURLs[] = $photoMeta['sizes']['large'];
 
 $photoAlt = $photoMeta['alt'];
-// Venue & Musicians
-$stdVen = get_the_terms($post->ID, 'venues');
-$ven = get_object_vars($stdVen[0]);
 
 // NEW ARTIST INFO
 $rawArtistList = get_field('artists');
 $rawArtistList = str_replace("'", "\"", $rawArtistList);
 $artistsArray = json_decode($rawArtistList, true);
 
+// VENUE
+$stdVen = get_the_terms($post->ID, 'venues');
 
-$taxAndVenID = "venues_" . $ven['term_id'];
+$ven = array_pop($stdVen);
+
+$taxAndVenID = "venues_" . $ven->term_id;
 $venCalendarURL = get_field('calendar_url', $taxAndVenID);
 $venTwitterURL = get_field('twitter_url', $taxAndVenID);
 $venFacebookURL = get_field('facebook_url', $taxAndVenID);
 $venMapURL = get_field('map_url', $taxAndVenID);
-$venName = $ven['name'];
+$venName = $ven->name;
 $venImg = get_field('image', $taxAndVenID);
 // Meta
 $highlight = get_field('highlight');
