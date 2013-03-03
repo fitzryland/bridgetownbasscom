@@ -64,20 +64,6 @@ body:after {
 	top:0;
 	z-index:-1000;
 }
-#cover {
-	background-color: rgba(0, 0, 0, 0.6);
-	display: none;
-	height: 200px;
-	position: fixed;
-	width: 100%;
-	z-index: 1000;
-	img {
-		left: 50%;
-		position: fixed;
-		top: 50%;
-		z-index: 1001;
-	}
-}
 .fixed {
 	background-image:url('images/BGFixed5_3.gif');
 	position:fixed;
@@ -245,10 +231,11 @@ article:after {
 		width: 224px;
 	}
 	img.poster {
-		bottom: 0;
-		left: 0;
-		position: absolute;
-		z-index: 999;
+		bottom:0;
+		cursor:pointer;
+		left:0;
+		position:absolute;
+		z-index:999;
 	}
 	img.small {
 		border-top: 0.5em solid $orange;

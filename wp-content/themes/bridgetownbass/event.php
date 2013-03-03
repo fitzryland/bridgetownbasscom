@@ -94,7 +94,7 @@ if ($highlight == 'Yes') {
 		</ul>
 	</div>
 	<div class="flip">
-		<img class="poster big" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>"/>
+		<img class="poster big" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>" data="<?php the_permalink(); ?>"/>
 		<div class="arrow"></div>
 		<div class="panelWrap">
 			<?php

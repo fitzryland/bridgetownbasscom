@@ -30,20 +30,8 @@ $(document).ready(function() {
 		
 		$arrow.removeClass('live');
 		$(x).removeClass('small').addClass('big');
-		console.log($arti.find('h2.current'));
 		$arti.find('h2.current').removeClass('current');
 	}
-	// #cover height set
-	function coverSet() {
-		var winH = $(window).height();
-		$('#cover').height(winH);
-	}
-	coverSet();
-	$(window).resize(function() {
-		coverSet();
-	});
-	// Parse lrgEventImgURLs JSON
-	var lrgEventImgURLs = jQuery.parseJSON($('#lrgEventImgURLs').text());
 	// Slide Panels
 	$('.static h2').click(function() {
 		if ($(this).hasClass('current')) {
@@ -65,8 +53,6 @@ $(document).ready(function() {
 			$(tarPanWrap).animate({
 				marginLeft: tarMar
 			}, "slow");
-			// display bouncing arrow
-			$arrow.addClass('live');
 			// shrink .poster image
 			if ($poster.hasClass('big')) {
 				$poster.removeClass('big').addClass('small');
@@ -87,35 +73,16 @@ $(document).ready(function() {
 		var x = $(this).siblings('.poster');
 		backToPoster(x);
 	});
+	
 	// what happens when you click a .poster?
 	$posters.click(function() {
 		if ($(this).hasClass('big')) {
-			var i = $posters.index(this),
-				$cover = $('#cover');
-			// show lightbox of really big version
-			$cover.fadeIn('fast');
-			$cover.html('<img src=\"' + lrgEventImgURLs[i] + '\" class=\"hardHidden\">');
-			// size img
-			$('#cover img').load(function() {
-				var winH = $(window).height(),
-					imgW = $('#cover img').width(),
-					imgH = $('#cover img').height(),
-					tarH = winH * 0.9,
-					tarW = tarH * (imgW / imgH);
-				$(this).width(tarW).height(tarH).css({
-					marginLeft: tarW / 2 * -1,
-					marginTop: tarH / 2 * -1
-				}).fadeIn('slow');
-			});
+			var link = $(this).attr('data');
+			window.location = link;
 		} else if ($(this).hasClass('small')) {
 			// animate back to original size
 			backToPoster(this);
 		}
-	});
-	// Close #cover
-	$('#cover').click(function() {
-		$(this).fadeOut('slow');
-		$(this).empty();
 	});
 	// Border Color Rotation
 	var i = 0,

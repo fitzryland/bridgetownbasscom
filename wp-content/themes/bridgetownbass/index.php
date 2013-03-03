@@ -30,10 +30,5 @@ foreach ($pageposts as $post):
 endforeach;
 else :
 endif;
-?>	
-<div id="lrgEventImgURLs">
-	<?php
-	echo json_encode($lrgEventImgURLs);
-	?>
-</div>
+?>
 <?php include 'footer.php'; ?>

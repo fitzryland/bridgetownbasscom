@@ -33,7 +33,6 @@
 		</script>
 	</head>
 	<body <?php body_class(); ?>>
-		<div id="cover"></div>
 		<div class="fixed"></div>
 		<header>
 			<img src="<?php echo get_template_directory_uri(); ?>/images/btbheaderlogo3_3.png" width="498" height="447" alt="Btbheaderlogo2" class="logo">
