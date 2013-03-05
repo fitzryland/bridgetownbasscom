@@ -4,10 +4,10 @@ $(document).ready(function() {
 	// Panel Height Set
 	$posters.each(function() {
 		$(this).load(function() {
-			var panelH = $(this).height() + 16,
+			var panelH = $(this).height(),
 				$article = $(this).parents('article');
 				
-			$article.find('.panel').each(function(i,v) {
+			$article.find('.flip').each(function(i,v) {
 				$(v).height(panelH);
 			});
 			// asign poster dimention .data() to each .poster
