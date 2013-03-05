@@ -34,14 +34,19 @@ $(document).ready(function() {
 	}
 	// Slide Panels
 	$('.static h2').click(function() {
+		var $thisPoster = $(this).parents('article').find('.poster');
+		$posters.not($thisPoster).each(function() {
+			backToPoster(this);
+		});
+		// retun .poster of all other evnets to .big
+		$('.event').on(".big");
+		// Decide what to do on click in current event
 		if ($(this).hasClass('current')) {
-			var x = $(this).parents('article').find('.poster'); //needs to be poster img
-			backToPoster(x);
+			backToPoster($thisPoster);
 		} else {
 			// find index of clicked element using .index()
 			var $arti = $(this).parents('article'),
 				clickedI = $arti.find('.static h2').index(this),
-				$poster = $arti.find('.poster'),
 				$arrow = $arti.find('.arrow'),
 				tarPanWrap = $arti.find('.panelWrap')[0],
 				tarMar = clickedI * -300;
@@ -54,10 +59,10 @@ $(document).ready(function() {
 				marginLeft: tarMar
 			}, "slow");
 			// shrink .poster image
-			if ($poster.hasClass('big')) {
-				$poster.removeClass('big').addClass('small');
+			if ($thisPoster.hasClass('big')) {
+				$thisPoster.removeClass('big').addClass('small');
 				// Slide poster down				
-				$poster.animate({
+				$thisPoster.animate({
 					bottom: -370
 				});
 				// var wid = 50,
