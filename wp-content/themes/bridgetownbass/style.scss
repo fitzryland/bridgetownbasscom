@@ -74,7 +74,7 @@ body:after {
 header, section, footer {
 	width: 500px;
 }
-header {
+header, footer {
 //	background-image:url(images/articleBG_1.gif);
 	font-size:15px;
 	margin:0 auto;
@@ -386,6 +386,14 @@ footer {
 	background-image:url(images/articleBG_1.gif);
 	margin:0 auto 1em;
 	text-align:center;
+	
+	/*transform*/
+	-webkit-transform:scale(-1, -1);
+	   -moz-transform:scale(-1, -1);
+	    -ms-transform:scale(-1, -1);
+	     -o-transform:scale(-1, -1);
+	        transform:scale(-1, -1);
+	
 	h1 {
 		color:$purple;
 		font-size:4.8em;
@@ -443,7 +451,7 @@ h1._404 {
 //			}
 //		}
 //	}
-	header {
+	header, footer {
 		font-size:16px;
 		h1 {
 			font-size:3em;

@@ -56,22 +56,22 @@ body:after {
 header, section, footer {
   width: 500px; }
 
-header {
+header, footer {
   font-size: 15px;
   margin: 0 auto;
   padding-top: 0.5em;
   position: relative;
   text-align: center; }
-  header h1 {
+  header h1, footer h1 {
     text-align: center;
     font-size: 5em;
     line-height: 1em;
     margin: 0;
     padding: 0;
     z-index: 0; }
-    header h1 a:link, header h1 a:visited {
+    header h1 a:link, header h1 a:visited, footer h1 a:link, footer h1 a:visited {
       color: #aa3fff; }
-    header h1 a:hover, header h1 a:active {
+    header h1 a:hover, header h1 a:active, footer h1 a:hover, footer h1 a:active {
       color: #aa3fff; }
 
 .logo, .logomobile {
@@ -288,7 +288,13 @@ h2.venue:hover {
 footer {
   background-image: url(images/articleBG_1.gif);
   margin: 0 auto 1em;
-  text-align: center; }
+  text-align: center;
+  /*transform*/
+  -webkit-transform: scale(-1, -1);
+  -moz-transform: scale(-1, -1);
+  -ms-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  transform: scale(-1, -1); }
   footer h1 {
     color: #aa3fff;
     font-size: 4.8em;
@@ -326,12 +332,12 @@ h1._404 {
   .fixed {
     display: none; }
 
-  header {
+  header, footer {
     font-size: 16px; }
-    header h1 {
+    header h1, footer h1 {
       font-size: 3em;
       margin: 0; }
-    header .menu-main-nav-container ul li {
+    header .menu-main-nav-container ul li, footer .menu-main-nav-container ul li {
       font-size: 2.9em; }
 
   .logo {
