@@ -38,14 +38,6 @@ body {
   padding: 0;
   position: relative; }
 
-body:after {
-  content: url("images/BGFixed5_1.png");
-  left: 50%;
-  margin-left: -500px;
-  position: fixed;
-  top: 0;
-  z-index: -1000; }
-
 .fixed {
   background-image: url("images/BGFixed5_3.png");
   position: fixed;
@@ -73,6 +65,14 @@ header, footer {
       color: #aa3fff; }
     header h1 a:hover, header h1 a:active, footer h1 a:hover, footer h1 a:active {
       color: #aa3fff; }
+
+.fixedCenter {
+  background-image: url("images/BGFixed5_1_0.png");
+  margin-left: -250px;
+  position: fixed;
+  height: 2000px;
+  width: 1000px;
+  z-index: -1000; }
 
 .logo, .logomobile {
   margin: 0 auto; }
@@ -328,6 +328,9 @@ h1._404 {
 @media only screen and (max-width: 600px) {
   header, section, footer {
     width: 316px; }
+
+  .fixedCenter {
+    margin-left: -342px; }
 
   header, footer {
     font-size: 16px; }

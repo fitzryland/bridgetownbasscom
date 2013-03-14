@@ -10,6 +10,7 @@ Author URI: 	http://FitzhughRyland.com
 $breakSmall: 600px;
 $widthSmall: 316px;
 
+$mainW: 500px;
 
 $blue:#00dfff; // HSL 188, 100, 50
 $purple:#aa3fff; // HSL 273, 100, 62
@@ -57,12 +58,12 @@ body {
 	position:relative;
 }
 body:after {
-	content:url('images/BGFixed5_1.png');
-	left:50%;
-	margin-left:-500px;
-	position:fixed;
-	top:0;
-	z-index:-1000;
+//	content:url('images/BGFixed5_1.png');
+//	left:50%;
+//	margin-left:-500px;
+//	position:fixed;
+//	top:0;
+//	z-index:-1000;
 }
 .fixed {
 	background-image:url('images/BGFixed5_3.png');
@@ -72,7 +73,7 @@ body:after {
 	z-index:-1000;
 }
 header, section, footer {
-	width: 500px;
+	width: $mainW;
 }
 header, footer {
 //	background-image:url(images/articleBG_1.gif);
@@ -97,6 +98,14 @@ header, footer {
 			color:$purple;
 		}
 	}
+}
+.fixedCenter {
+		background-image:url('images/BGFixed5_1_0.png');
+		margin-left:-500px + ($mainW/2);
+		position:fixed;
+		height:2000px;
+		width:1000px;
+		z-index:-1000;
 }
 .logo, .logomobile {
 	margin:0 auto;
@@ -438,7 +447,9 @@ h1._404 {
 	.fixed {
 //		display:none;
 	}
-	
+	.fixedCenter {
+		margin-left:-500px + ($widthSmall/2);
+	}
 //	header {
 //		font-size:16px;
 //		h1 {

@@ -35,7 +35,7 @@
 	<body <?php body_class(); ?>>
 		<div class="fixed"></div>
 		<header>
-			
+			<div class="fixedCenter"></div>
 			<?php include 'heading.php'; ?>
 			
 		</header>
