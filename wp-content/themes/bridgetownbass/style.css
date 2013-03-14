@@ -39,7 +39,7 @@ body {
   position: relative; }
 
 body:after {
-  content: url("images/BGFixed5_1.gif");
+  content: url("images/BGFixed5_1.png");
   left: 50%;
   margin-left: -500px;
   position: fixed;
@@ -47,7 +47,7 @@ body:after {
   z-index: -1000; }
 
 .fixed {
-  background-image: url("images/BGFixed5_3.gif");
+  background-image: url("images/BGFixed5_3.png");
   position: fixed;
   height: 2000px;
   width: 100%;
@@ -116,7 +116,7 @@ section {
 
 /********* EVENTS *********/
 article {
-  background-image: url("images/articleBG_1.gif");
+  background-image: url("images/articleBG_1.png");
   border: 0.5em solid #ff9f00;
   margin: 0 0 1em;
   position: relative;
@@ -286,7 +286,7 @@ h2.venue:hover {
 
 /********* FOOTER *********/
 footer {
-  background-image: url(images/articleBG_1.gif);
+  background-image: url("images/articleBG_1.png");
   margin: 0 auto 1em;
   text-align: center;
   /*transform*/
@@ -328,9 +328,6 @@ h1._404 {
 @media only screen and (max-width: 600px) {
   header, section, footer {
     width: 316px; }
-
-  .fixed {
-    display: none; }
 
   header, footer {
     font-size: 16px; }

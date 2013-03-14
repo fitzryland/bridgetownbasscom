@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>js/site.js</string>
+	<string>footer.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -29,19 +29,19 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>event.php</key>
+		<key>footer.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>56</integer>
+				<integer>25</integer>
 				<key>line</key>
-				<integer>29</integer>
+				<integer>2</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>16</integer>
+			<integer>0</integer>
 		</dict>
 		<key>functions.php</key>
 		<dict>
@@ -62,23 +62,53 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>80</integer>
+				<integer>3</integer>
 				<key>line</key>
-				<integer>37</integer>
+				<integer>38</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>5</integer>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>34</integer>
+				<key>line</key>
+				<integer>38</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>3</integer>
+				<key>line</key>
+				<integer>38</integer>
+			</dict>
 		</dict>
-		<key>js/site.js</key>
+		<key>heading.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>24</integer>
+				<integer>32</integer>
 				<key>line</key>
-				<integer>10</integer>
+				<integer>6</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>index.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>32</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -115,28 +145,43 @@
 				<integer>188</integer>
 			</dict>
 		</dict>
-		<key>style.scss</key>
+		<key>single.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>9</integer>
 				<key>line</key>
-				<integer>235</integer>
+				<integer>15</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>209</integer>
+			<integer>0</integer>
+		</dict>
+		<key>style.scss</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>289</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>265</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>style.scss</string>
-		<string>event.php</string>
-		<string>js/site.js</string>
-		<string>functions.php</string>
+		<string>heading.php</string>
+		<string>footer.php</string>
+		<string>single.php</string>
 		<string>header.php</string>
+		<string>index.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<false/>

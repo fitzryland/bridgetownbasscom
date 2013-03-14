@@ -57,7 +57,7 @@ body {
 	position:relative;
 }
 body:after {
-	content:url('images/BGFixed5_1.gif');
+	content:url('images/BGFixed5_1.png');
 	left:50%;
 	margin-left:-500px;
 	position:fixed;
@@ -65,7 +65,7 @@ body:after {
 	z-index:-1000;
 }
 .fixed {
-	background-image:url('images/BGFixed5_3.gif');
+	background-image:url('images/BGFixed5_3.png');
 	position:fixed;
 	height:2000px;
 	width:100%;
@@ -169,7 +169,7 @@ section {
 }
 /********* EVENTS *********/
 article {
-	background-image:url('images/articleBG_1.gif');
+	background-image:url('images/articleBG_1.png');
 	border:0.5em solid $orange;
 	margin:0 0 1em;
 //	padding-right:1em;
@@ -383,7 +383,7 @@ h2.venue:hover {
 }
 /********* FOOTER *********/
 footer {
-	background-image:url(images/articleBG_1.gif);
+	background-image:url('images/articleBG_1.png');
 	margin:0 auto 1em;
 	text-align:center;
 	
@@ -436,7 +436,7 @@ h1._404 {
 		width: $widthSmall;
 	}
 	.fixed {
-		display:none;
+//		display:none;
 	}
 	
 //	header {
