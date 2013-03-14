@@ -55,23 +55,27 @@ if ($highlight == 'Yes') {
 	<!--</div>-->
 	<div class="static">
 		<!-- START NEW ARTIST THANG -->
-		<?php 
-		foreach ($artistsArray as $artID) {
-			$art = get_term($artID, 'artist');
-			echo "<h2>" . $art->name . "</h2>";
-		};
+		<?php
+		if ($artistsArray) {
+			foreach ($artistsArray as $artID) {
+				$art = get_term($artID, 'artist');
+				echo "<h2>" . $art->name . "</h2>";
+			};
+		}
 		?>
 		<!-- END NEW ARTIST THANG -->
 		
 		<!-- START OLD ARTIST THANG -->
 		<?php
-		foreach (get_the_terms($post->ID, 'artist') as $i=>$stdArt) {
-			$ar = get_object_vars($stdArt);
-			$artistName = $ar['name'];
-			?>
-			<!-- <h2 class="<?php // echo "artistMeta" . $i; ?>"><?php // echo $artistName; ?></h2> -->
-			<?php
-		}; 
+		if (get_the_terms($post->ID, 'artist')) {
+			foreach (get_the_terms($post->ID, 'artist') as $i=>$stdArt) {
+				$ar = get_object_vars($stdArt);
+				$artistName = $ar['name'];
+				?>
+				<!-- <h2 class="<?php // echo "artistMeta" . $i; ?>"><?php // echo $artistName; ?></h2> -->
+				<?php
+			};
+		}
 		?>
 		<!-- END OLD ARTIST THANG -->
 		
