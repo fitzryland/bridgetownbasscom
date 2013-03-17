@@ -105,7 +105,7 @@ header, footer {
 		position:fixed;
 		height:2000px;
 		width:1000px;
-		z-index:-1000;
+		z-index:-995;
 }
 .logo, .logomobile {
 	margin:0 auto;
@@ -445,7 +445,7 @@ h1._404 {
 		width: $widthSmall;
 	}
 	.fixed {
-//		display:none;
+		display:none;
 	}
 	.fixedCenter {
 		margin-left:-500px + ($widthSmall/2);

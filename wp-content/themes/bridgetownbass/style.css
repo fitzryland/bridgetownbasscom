@@ -72,7 +72,7 @@ header, footer {
   position: fixed;
   height: 2000px;
   width: 1000px;
-  z-index: -1000; }
+  z-index: -995; }
 
 .logo, .logomobile {
   margin: 0 auto; }
@@ -328,6 +328,9 @@ h1._404 {
 @media only screen and (max-width: 600px) {
   header, section, footer {
     width: 316px; }
+
+  .fixed {
+    display: none; }
 
   .fixedCenter {
     margin-left: -342px; }
