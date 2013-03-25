@@ -134,14 +134,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>24</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>450</integer>
+				<integer>447</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>436</integer>
+			<integer>432</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>

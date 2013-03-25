@@ -445,7 +445,10 @@ h1._404 {
 		width: $widthSmall;
 	}
 	.fixed {
-//		display:none;
+		display:none;
+	}
+	article {
+		background-image:none;
 	}
 	.fixedCenter {
 		margin-left:-500px + ($widthSmall/2);

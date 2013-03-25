@@ -34,8 +34,8 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<div class="fixed"></div>
+		<div class="fixedCenter"></div>
 		<header>
-			<div class="fixedCenter"></div>
 			<?php include 'heading.php'; ?>
 			
 		</header>
