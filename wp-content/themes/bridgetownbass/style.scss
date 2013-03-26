@@ -101,7 +101,8 @@ header, footer {
 }
 .fixedCenter {
 		background-image:url('images/BGFixed5_1_0.png');
-		margin-left:-500px + ($mainW/2);
+		margin-left:-500px;
+		left:50%;
 		position:fixed;
 		height:2000px;
 		width:1000px;
@@ -449,9 +450,6 @@ h1._404 {
 	}
 	article {
 		background-image:none;
-	}
-	.fixedCenter {
-		margin-left:-500px + ($widthSmall/2);
 	}
 //	header {
 //		font-size:16px;
