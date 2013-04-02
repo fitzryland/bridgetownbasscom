@@ -100,6 +100,7 @@ class Tax_order extends acf_Field
 		<div class="taxbox group">
 			<label for="search">Search Artists: </label>
 			<input type="text" id="search" autocomplete="off"/>
+			<span id="toggleAll">Show All</span>
 			<ul id="taxpool">
 			<?php
 			foreach ($taxs as $tax) {

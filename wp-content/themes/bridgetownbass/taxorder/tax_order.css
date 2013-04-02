@@ -40,6 +40,9 @@
       background-color: transparent;
       font-style: italic; }
 
+#toggleAll {
+  display: block; }
+
 .group:after {
   content: "";
   display: table;

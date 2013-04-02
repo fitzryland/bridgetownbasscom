@@ -2,7 +2,15 @@ $(document).ready(function() {
 	"use strict";
 	var $taxsort = $('#taxsort'),
 		$input = $('.taxbox .taxorder'),
-		$search = $('#search');
+		$search = $('#search'),
+		toggleAll = {
+			show: function() {
+				
+			},
+			hide: function() {
+				
+			}
+		};
 	
 	$('#taxpool li').each(function() {
 		$(this).fadeOut();
