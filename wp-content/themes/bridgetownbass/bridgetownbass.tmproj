@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>footer.php</string>
+	<string>style.scss</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -42,20 +42,6 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>154</integer>
-		</dict>
-		<key>footer.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>11</integer>
-				<key>line</key>
-				<integer>2</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
 		</dict>
 		<key>functions.php</key>
 		<dict>
@@ -127,7 +113,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>424</integer>
+			<integer>0</integer>
 		</dict>
 		<key>taxorder/tax_order.js</key>
 		<dict>
@@ -175,7 +161,6 @@
 	<key>openDocuments</key>
 	<array>
 		<string>event.php</string>
-		<string>footer.php</string>
 		<string>style.scss</string>
 		<string>taxorder/tax_order.php</string>
 		<string>taxorder/tax_order.js</string>
