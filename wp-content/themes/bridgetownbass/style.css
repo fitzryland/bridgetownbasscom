@@ -32,8 +32,8 @@ html {
 body {
   background-color: #000000;
   background-image: url("images/BGBG2_4.gif");
-  color: red;
-  font: 16px "Anton", Impact, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  color: #00dfff;
+  font: 16px 'Anton', Impact, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
   margin: 0;
   padding: 0;
   position: relative; }
@@ -96,7 +96,7 @@ header, footer {
       line-height: 1em;
       z-index: 900; }
       .menu-main-nav-container ul li a:link, .menu-main-nav-container ul li a:visited {
-        color: red; }
+        color: #00dfff; }
       .menu-main-nav-container ul li a:hover, .menu-main-nav-container ul li a:active {
         color: #ff9f00; }
 
@@ -149,7 +149,7 @@ article:after {
   width: 300px;
   z-index: 100; }
   .flip a:link, .flip a:visited {
-    color: red; }
+    color: #00dfff; }
   .flip a:hover, .flip a:active {
     color: #ff9f00; }
   .flip img.venImg {
@@ -188,7 +188,7 @@ article:after {
     width: 0;
     z-index: 1001; }
   .flip .live:hover {
-    border-bottom-color: red;
+    border-bottom-color: #00dfff;
     cursor: pointer; }
 
 .panelWrap {
@@ -196,7 +196,7 @@ article:after {
   width: 9999em; }
 
 .panel {
-  border-right: 0.5em solid #ff9f00;
+  border-right: 0.5em solid #FF9F00;
   float: left;
   overflow: hidden;
   width: 292px; }
@@ -221,7 +221,7 @@ article:after {
   z-index: 100; }
   .static h2 {
     clear: both;
-    color: red;
+    color: #00dfff;
     font-size: 1.7em;
     margin: 0;
     position: relative; }
@@ -278,7 +278,7 @@ h2.venue:hover {
     padding: 0;
     vertical-align: middle; }
   .meta a:link, .meta a:visited {
-    color: red; }
+    color: #00dfff; }
   .meta a:hover, .meta a:active {
     color: #ff9f00; }
 
