@@ -45,15 +45,6 @@ if ($highlight == 'Yes') {
 	echo "class=\"group\"";
 }
 ?>>
-	<!--<div class="readable">-->
-		<?php
-		
-//		echo "Current Time: " . "</br>" . date("D M d, Y G:i a", $curTime) . "</br>" . "</br>";
-		
-//		echo "Expiration Time: " . "</br>" . date("D M d, Y G:i a", $post->TIMESTAMP) . "</br>" . "</br>";
-		
-		?>
-	<!--</div>-->
 	<div class="static">
 		<!-- START NEW ARTIST THANG -->
 		<?php
@@ -65,7 +56,7 @@ if ($highlight == 'Yes') {
 		}
 		?>
 		<!-- END NEW ARTIST THANG -->
-		
+
 		<!-- START OLD ARTIST THANG -->
 		<?php
 		if (get_the_terms($post->ID, 'artist')) {
@@ -79,9 +70,9 @@ if ($highlight == 'Yes') {
 		}
 		?>
 		<!-- END OLD ARTIST THANG -->
-		
-		
-		
+
+
+
 		<h2 class="venue"><?php echo $venName; ?></h2>
 		<div class="date">
 			<?php echo $dayOfWeek; ?> <?php echo $monthName; ?> <?php echo $day; ?>
@@ -156,10 +147,10 @@ if ($highlight == 'Yes') {
 				</div>
 			</div>
 				<?php
-			}; 
+			};
 			?>
-			
-			
+
+
 			<div class="panel venue">
 				<?php if ($venCalendarURL) { ?>
 					<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
@@ -197,9 +188,3 @@ if ($highlight == 'Yes') {
 	</div>
 	<div class="clear"></div>
 </article>
-
-
-
-
-
-
