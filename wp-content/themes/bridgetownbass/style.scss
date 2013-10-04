@@ -263,7 +263,11 @@ article:after {
 	width:184px; // 500 - 16 - 300
 	z-index:100;
 	h2 {
-		clear:both;
+		// background-color:$purple;
+		// border-top:0.25em solid lighten($purple, 10%);
+		// border-right:0.25em solid darken($purple, 10%);
+		// border-bottom:0.25em solid darken($purple, 10%);
+		// border-left:0.25em solid lighten($purple, 10%);
 		color:$blue;
 		font-size:1.7em;
 		margin:0;

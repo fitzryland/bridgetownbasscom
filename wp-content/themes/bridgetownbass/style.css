@@ -220,7 +220,6 @@ article:after {
   width: 184px;
   z-index: 100; }
   .static h2 {
-    clear: both;
     color: #00dfff;
     font-size: 1.7em;
     margin: 0;
@@ -413,9 +412,3 @@ span.wpengine-promo {
     margin-left: -18em; }
   .icon a img:hover {
     margin-top: -3em; }
-
-.readable {
-  font-family: georgia;
-  padding: 1em;
-  background-color: white;
-  color: black; }

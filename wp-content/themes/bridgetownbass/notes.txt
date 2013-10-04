@@ -1,6 +1,8 @@
 - Additional break point for tablets
+- css transitions if available
 
-- small carott on links not .current
+
+- small carrot on links not .current
 - arrow to see big poster
-- maybe differenciate links and date - color and font or size
+- maybe differentiate links and date - color and font or size
 - icon fonts
