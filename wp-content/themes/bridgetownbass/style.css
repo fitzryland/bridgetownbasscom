@@ -11,7 +11,7 @@ Author URI: 	http://FitzhughRyland.com
 .clear {
   clear: both; }
 
-header, section, article, footer {
+header, section, article {
   display: block; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,33 +38,20 @@ body {
   padding: 0;
   position: relative; }
 
+header, section {
+  width: 500px; }
+
+header {
+  margin: 0 auto;
+  padding-top: 0.5em;
+  position: relative; }
+
 .fixed {
   background-image: url("images/BGFixed5_3.png");
   position: fixed;
   height: 2000px;
   width: 100%;
   z-index: -1000; }
-
-header, section, footer {
-  width: 500px; }
-
-header, footer {
-  font-size: 15px;
-  margin: 0 auto;
-  padding-top: 0.5em;
-  position: relative;
-  text-align: center; }
-  header h1, footer h1 {
-    text-align: center;
-    font-size: 5em;
-    line-height: 1em;
-    margin: 0;
-    padding: 0;
-    z-index: 0; }
-    header h1 a:link, header h1 a:visited, footer h1 a:link, footer h1 a:visited {
-      color: #aa3fff; }
-    header h1 a:hover, header h1 a:active, footer h1 a:hover, footer h1 a:active {
-      color: #aa3fff; }
 
 .fixedCenter {
   background-image: url("images/BGFixed5_1_0.png");
@@ -75,42 +62,8 @@ header, footer {
   width: 1000px;
   z-index: -995; }
 
-.logo, .logomobile {
-  margin: 0 auto; }
-
 .logomobile {
   display: none; }
-
-.menu-main-nav-container {
-  margin-bottom: 0.3em; }
-  .menu-main-nav-container ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    z-index: 1000; }
-    .menu-main-nav-container ul h1 {
-      z-index: 1100; }
-    .menu-main-nav-container ul li {
-      display: inline;
-      font-size: 4.8em;
-      line-height: 1em;
-      z-index: 900; }
-      .menu-main-nav-container ul li a:link, .menu-main-nav-container ul li a:visited {
-        color: #00dfff; }
-      .menu-main-nav-container ul li a:hover, .menu-main-nav-container ul li a:active {
-        color: #ff9f00; }
-
-#bridge, #town, #bass {
-  line-height: .8em; }
-
-#bridge {
-  font-size: 4em; }
-
-#town {
-  font-size: 4.9em; }
-
-#bass {
-  font-size: 5.5em; }
 
 section {
   margin: 0 auto; }
@@ -118,28 +71,9 @@ section {
 /********* EVENTS *********/
 article {
   background-image: url("images/articleBG_1.png");
-  border: 0.5em solid #ff9f00;
   margin: 0 0 1em;
   position: relative;
   z-index: 50; }
-
-article:before {
-  left: -128px; }
-
-article:after {
-  right: -127px;
-  top: 0;
-  /* Safari */
-  -webkit-transform: rotate(-180deg);
-  /* Firefox */
-  -moz-transform: rotate(-180deg);
-  /* IE */
-  -ms-transform: rotate(-180deg);
-  /* Opera */
-  -o-transform: rotate(-180deg);
-  /* Internet Explorer */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  z-index: 2000; }
 
 .flip {
   float: left;
@@ -284,32 +218,6 @@ h2.venue:hover {
 #lrgEventImgURLs {
   display: none; }
 
-/********* FOOTER *********/
-footer {
-  background-image: url("images/articleBG_1.png");
-  margin: 0 auto 1em;
-  text-align: center;
-  /*transform*/
-  -webkit-transform: scale(-1, -1);
-  -moz-transform: scale(-1, -1);
-  -ms-transform: scale(-1, -1);
-  -o-transform: scale(-1, -1);
-  transform: scale(-1, -1); }
-  footer h1 {
-    color: #aa3fff;
-    font-size: 4.8em;
-    line-height: 1em;
-    margin: 0;
-    padding: 0;
-    text-align: center; }
-  footer p {
-    color: #aa3fff;
-    margin: 0;
-    padding: 0; }
-  footer .social {
-    margin: 2em auto;
-    width: 15em; }
-
 h1._404 {
   color: #ff9f00;
   font-size: 18em;
@@ -326,7 +234,7 @@ h1._404 {
   -o-transform: rotate(-3deg); }
 
 @media only screen and (max-width: 600px) {
-  header, section, footer {
+  header, section {
     width: 316px; }
 
   .fixed {
@@ -335,12 +243,12 @@ h1._404 {
   article {
     background-image: none; }
 
-  header, footer {
+  header {
     font-size: 16px; }
-    header h1, footer h1 {
+    header h1 {
       font-size: 3em;
       margin: 0; }
-    header .menu-main-nav-container ul li, footer .menu-main-nav-container ul li {
+    header .menu-main-nav-container ul li {
       font-size: 2.9em; }
 
   .logo {
@@ -356,9 +264,6 @@ h1._404 {
   article:after {
     display: none;
     right: 180px; }
-
-  footer h1 {
-    font-size: 3em; }
 
   .panel {
     border-color: transparent; }

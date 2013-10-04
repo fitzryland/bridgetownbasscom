@@ -32,6 +32,7 @@ wp-content/mysql.sql
 
 # fitz specific
 /.htaccess
+wp-content/themes/bridgetownbass/.sass-cache
 
 # large/disallowed file types
 # a CDN should be used for these
