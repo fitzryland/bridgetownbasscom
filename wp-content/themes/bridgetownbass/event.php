@@ -40,10 +40,16 @@ $ticketLink = get_field('ticket_link');
 ?>
 <article <?php
 if ($highlight == 'Yes') {
-	echo "class=\"group highlight\"";
+	echo "class=\"event highlight\"";
 } else {
-	echo "class=\"group\"";
+	echo "class=\"event\"";
 }
 ?>>
-	<img class="poster big" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>" />
+	<img class="poster" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>" />
+
+
+
+
+
+
 </article>

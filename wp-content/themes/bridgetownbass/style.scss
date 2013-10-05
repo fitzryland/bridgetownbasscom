@@ -6,7 +6,26 @@ Version: 		0.1
 Author: 		Fitz Ryland
 Author URI: 	http://FitzhughRyland.com
 */
-
+// http://patorjk.com/software/taag/#p=display&f=Georgia11&t=Type%20Something%20
+// http://patorjk.com/software/taag/#p=display&f=4Max&t=Type%20Something%20
+// `7MMF'                                               mm
+//   MM                                                 MM
+//   MM  `7MMpMMMb.pMMMb. `7MMpdMAo.  ,pW"Wq.`7Mb,od8 mmMMmm ,pP"Ybd
+//   MM    MM    MM    MM   MM   `Wb 6W'   `Wb MM' "'   MM   8I   `"
+//   MM    MM    MM    MM   MM    M8 8M     M8 MM       MM   `YMMMa.
+//   MM    MM    MM    MM   MM   ,AP YA.   ,A9 MM       MM   L.   I8
+// .JMML..JMML  JMML  JMML. MMbmmd'   `Ybmd9'.JMML.     `MbmoM9mmmP'
+//                          MM
+//                        .JMML.
+@import "normalize";
+//                                ,,           ,,        ,,
+// `7MMF'   `7MF'                 db          *MM      `7MM
+//   `MA     ,V                                MM        MM
+//    VM:   ,V ,6"Yb.  `7Mb,od8 `7MM   ,6"Yb.  MM,dMMb.  MM  .gP"Ya  ,pP"Ybd
+//     MM.  M'8)   MM    MM' "'   MM  8)   MM  MM    `Mb MM ,M'   Yb 8I   `"
+//     `MM A'  ,pm9MM    MM       MM   ,pm9MM  MM     M8 MM 8M"""""" `YMMMa.
+//      :MM;  8M   MM    MM       MM  8M   MM  MM.   ,M9 MM YM.    , L.   I8
+//       VF   `Moo9^Yo..JMML.   .JMML.`Moo9^Yo.P^YbmdP'.JMML.`Mbmmd' M9mmmP'
 $breakSmall: 600px;
 $widthSmall: 316px;
 
@@ -24,11 +43,31 @@ $orange:#ff9f00; // HSL 37, 100, 50
 // 50.5+(50.5-37) = 64
 
 
+//                   ,,               ,,             gp
+// `7MMM.     ,MMF'  db               db             \/
+//   MMMb    dPMM                                    `'
+//   M YM   ,M MM  `7MM  `7M'   `MF'`7MM  `7MMpMMMb.   ,pP"Ybd
+//   M  Mb  M' MM    MM    `VA ,V'    MM    MM    MM   8I   `"
+//   M  YM.P'  MM    MM      XMX      MM    MM    MM   `YMMMa.
+//   M  `YM'   MM    MM    ,V' VA.    MM    MM    MM   L.   I8
+// .JML. `'  .JMML..JMML..AM.   .MA..JMML..JMML  JMML. M9mmmP'
+@mixin group() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 /*										1. *general
 */
-.clear {
-	clear: both;
-}
 header, section, article {
 	display: block;
 
@@ -57,13 +96,11 @@ body {
 	padding: 0;
 	position: relative;
 }
-header, section {
-	width: $mainW;
-}
 header {
 	margin: 0 auto;
 	padding-top: 0.5em;
 	position: relative;
+	width: $mainW;
 }
 .fixed {
 	background-image: url('images/BGFixed5_3.png');
@@ -86,11 +123,12 @@ header {
 }
 section {
 	margin: 0 auto;
+	width: 300px;
 }
 /********* EVENTS *********/
-article {
+.event {
 	background-image: url('images/articleBG_1.png');
-	margin: 0 0 1em;
+	margin: 0.5em 0;
 	position: relative;
 	z-index: 50;
 }
@@ -100,174 +138,6 @@ article {
 
 
 
-.flip {
-	float:left;
-	height:450px;
-	overflow:hidden;
-	position:relative;
-	width:300px;
-	z-index:100;
-	a:link, a:visited {
-		color:$blue;
-	}
-	a:hover, a:active {
-		color:$orange;
-	}
-	img.venImg {
-		display: block;
-		margin: 0 auto;
-		width: 224px;
-	}
-	img.poster {
-		bottom:0;
-		cursor:pointer;
-		left:0;
-		position:absolute;
-		z-index:999;
-	}
-	img.small {
-		border-top: 0.5em solid $orange;
-	}
-	img.small:after {
-		content:"BOOM";
-		border-top:4em solid transparent;
-		border-right:4em solid transparent;
-		border-bottom:4em solid $orange;
-		border-left:4em solid transparent;
-		left:0em;
-		position:absolute;
-		top:0em;
-		height:1em;
-		width:1em;
-		z-index:1001;
-	}
-	.live {
-		border-top:1em solid transparent;
-		border-right:1em solid transparent;
-		border-bottom:1em solid $orange;
-		border-left:1em solid transparent;
-		bottom:2em;
-		left:9em;
-		position:absolute;
-		height:0;
-		width:0;
-		z-index:1001;
-	}
-	.live:hover {
-		border-bottom-color:$blue;
-		cursor:pointer;
-	}
-}
-.panelWrap {
-	position:absolute;
-	width:9999em;
-}
-.panel {
-	border-right: 0.5em solid #FF9F00;
-	float: left;
-	overflow: hidden;
-	width: 292px;
-	h1 {
-		font-size: 1.5em;
-		margin: 0.5em 0;
-		text-align: center;
-	}
-}
-.artist {
-	width:292px;
-	h1 {
-		text-align:center;
-	}
-	img.artistImg {
-		display:block;
-		margin:0 auto;
-		width:224px;
-	}
-}
-.static {
-	text-align:center;
-	float:right;
-	width:184px; // 500 - 16 - 300
-	z-index:100;
-	h2 {
-		// background-color:$purple;
-		// border-top:0.25em solid lighten($purple, 10%);
-		// border-right:0.25em solid darken($purple, 10%);
-		// border-bottom:0.25em solid darken($purple, 10%);
-		// border-left:0.25em solid lighten($purple, 10%);
-		color:$blue;
-		font-size:1.7em;
-		margin:0;
-		position:relative;
-	}
-	h2:hover {
-		color:$orange;
-		cursor:pointer;
-	}
-	h2:hover:after {
-		content:"";
-		border-top:0.4em solid transparent;
-		border-bottom:0.4em solid transparent;
-		border-left:0.4em solid $orange;
-		left:0em;
-		position:absolute;
-		top:0.4em;
-		height:0;
-		width:0;
-	}
-	.current {
-		color:$orange;
-		cursor:pointer;
-	}
-	.current:after {
-		content:"";
-		border-top:0.4em solid transparent;
-		border-bottom:0.4em solid transparent;
-		border-left:0.4em solid $orange;
-		left:0em;
-		position:absolute;
-		top:0.4em;
-		height:0;
-		width:0;
-	}
-}
-.date {
-	color:$orange;
-	font-size:1.5em;
-	text-align:center;
-	text-transform:uppercase;
-	width:100%;
-}
-
-h2.venue {
-	color:$purple;
-	font-size:1.6em;
-	text-align:center;
-}
-h2.venue:hover {
-	color:$orange;
-}
-.meta {
-	display-style-type:none;
-	font-size:1.2em;
-	margin:0;
-	padding:0;
-	li {
-		display:inline;
-		margin:0;
-		padding:0;
-		vertical-align:middle;
-	}
-	a:link, a:visited {
-		color:$blue;
-	}
-	a:hover, a:active {
-		color:$orange;
-	}
-}
-#lrgEventImgURLs {
-	display: none;
-}
 
 h1._404 {
 	color:$orange;
@@ -287,64 +157,14 @@ h1._404 {
 	/* Opera */
 	-o-transform: rotate(-3deg);
 }
-@media only screen and (max-width: $breakSmall) {
-	header, section {
-		width: $widthSmall;
-	}
-	.fixed {
-		display:none;
-	}
-	article {
-		background-image:none;
-	}
-	header {
-		font-size:16px;
-		h1 {
-			font-size:3em;
-			margin:0;
-		}
-		.menu-main-nav-container {
-			ul {
-				li {
-					font-size:2.9em;
-				}
-			}
-		}
-	}
 
-	.logo {
-		display:none;
-	}
-	.logomobile {
-		display:inline;
-	}
-	article:before {
-		display:none;
-		left:180px;
-	}
-	article:after {
-		display:none;
-		right:180px;
-	}
-	.panel {
-		border-color: transparent;
-	}
-	.static {
-		float: none;
-		font-size: 1.4em;
-		margin: 0 auto;
-		width: auto;
-		h2 {
-			margin-left:0.3em;
-		}
-	}
-	h1._404 {
-		font-size:12em;
-	}
-}
+
 /********* GENERAL *********/
 span.wpengine-promo {
 	display:none;
+}
+.clear {
+	clear: both;
 }
 .hidden {
 	margin-left:-999em;
