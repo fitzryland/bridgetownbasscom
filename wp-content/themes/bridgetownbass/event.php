@@ -46,7 +46,100 @@ if ($highlight == 'Yes') {
 }
 ?>>
 	<img class="poster" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>" />
+<div class="flip">
+		<div class="panelWrap">
+			<?php
+			foreach ($artistsArray as $artID) {
+				$art = get_term($artID, 'artist');
+				$artistName = $art->name;
+				$taxAndIDmusic = "artist_" . $artID;
+				$artistMusicURL = get_field('music_url', $taxAndIDmusic);
+				$artistTwitterURL = get_field('twitter_url', $taxAndIDmusic);
+				$artistPhoto = get_field('artist_photo', $taxAndIDmusic);
+				$artistFacebookURL = get_field('facebook_url', $taxAndIDmusic);
+				$artistMyspaceURL = get_field('myspace_url', $taxAndIDmusic);
+				$artistWebURL = get_field('web_url', $taxAndIDmusic);
+				?>
+			<div class="panel artist">
+				<?php if ($artistWebURL) { ?>
+					<a href="<?php echo $artistWebURL; ?>" target="_new">
+						<h1><?php echo $artistName; ?></h1>
+					</a>
+				<?php } else { ?>
+					<h1><?php echo $artistName; ?></h1>
+				<?php }; ?>
+				<img src="<?php echo $artistPhoto['sizes']['artist-img']; ?>" class="artistImg"/>
+				<div class="social">
+					<?php if ($artistMusicURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $artistMusicURL; ?>" target="_new">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="s"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($artistTwitterURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $artistTwitterURL; ?>" target="_new">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="t"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($artistFacebookURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $artistFacebookURL; ?>" target="_new">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="f"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($artistMusicURL && $artistTwitterURL && $artistFacebookURL) {} elseif ($artistMyspaceURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $artistMyspaceURL; ?>" target="_new">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="m"/>
+							</a>
+						</div>
+					<?php }; ?>
+				</div>
+			</div>
+				<?php
+			};
+			?>
 
+
+			<div class="panel venue">
+				<?php if ($venCalendarURL) { ?>
+					<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
+						<h1><?php echo $venName; ?></h1>
+					</a>
+				<?php } else { ?>
+					<h1><?php echo $venName; ?></h1>
+				<?php }; ?>
+				<img class="venImg" src="<?php echo $venImg['sizes']['artist-img']; ?>">
+				<div class="social">
+					<?php if ($venTwitterURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $venTwitterURL; ?>" target="_new" title="">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="t"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($venFacebookURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $venFacebookURL; ?>" target="_new" title="">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="f"/>
+							</a>
+						</div>
+					<?php }; ?>
+					<?php if ($venMapURL) { ?>
+						<div class="icon">
+							<a href="<?php echo $venMapURL; ?>" target="_new" title="">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="ma"/>
+							</a>
+						</div>
+					<?php }; ?>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
