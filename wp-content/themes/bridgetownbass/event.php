@@ -44,8 +44,9 @@ if ($highlight == 'Yes') {
 	echo "class=\"event\"";
 }
 ?>>
+	<div class="moreTab">MORE INFO</div>
 	<img class="poster" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>" />
-<div class="flip">
+	<div class="info">
 		<div class="panelWrap">
 			<?php
 			foreach ($artistsArray as $artID) {

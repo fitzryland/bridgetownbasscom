@@ -748,10 +748,20 @@ section {
 /********* EVENTS *********/
 .event {
   background-image: url("images/articleBG_1.png");
-  margin: 0.5em 0;
+  margin: 0.5em 0 2em;
   position: relative;
   text-align: center;
   z-index: 50; }
+
+.moreTab {
+  background-color: #ff9f00;
+  bottom: -2em;
+  position: absolute;
+  right: 0; }
+
+.info {
+  border: 0.5em solid #ff9f00;
+  display: none; }
 
 .artistImg {
   display: block;

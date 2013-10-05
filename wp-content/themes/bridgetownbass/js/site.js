@@ -2,7 +2,9 @@ $(document).ready(function() {
 	"use strict";
 	var $posters = $('.poster');
 	// Panel Height Set
+	$posters.click(function() {
 
+	});
 
 	// Border Color Rotation
 	var i = 0,
