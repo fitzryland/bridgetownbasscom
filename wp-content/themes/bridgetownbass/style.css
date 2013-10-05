@@ -750,7 +750,12 @@ section {
   background-image: url("images/articleBG_1.png");
   margin: 0.5em 0;
   position: relative;
+  text-align: center;
   z-index: 50; }
+
+.artistImg {
+  display: block;
+  margin: 0 auto; }
 
 h1._404 {
   color: #ff9f00;

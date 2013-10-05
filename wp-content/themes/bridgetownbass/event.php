@@ -1,6 +1,5 @@
 <?php
 // Date
-// quick test change
 $dateRaw = get_field('date');
 $dateArray = explode('/',$dateRaw);
 $year = $dateArray[0];
@@ -60,7 +59,6 @@ if ($highlight == 'Yes') {
 				$artistMyspaceURL = get_field('myspace_url', $taxAndIDmusic);
 				$artistWebURL = get_field('web_url', $taxAndIDmusic);
 				?>
-			<div class="panel artist">
 				<?php if ($artistWebURL) { ?>
 					<a href="<?php echo $artistWebURL; ?>" target="_new">
 						<h1><?php echo $artistName; ?></h1>
@@ -69,75 +67,46 @@ if ($highlight == 'Yes') {
 					<h1><?php echo $artistName; ?></h1>
 				<?php }; ?>
 				<img src="<?php echo $artistPhoto['sizes']['artist-img']; ?>" class="artistImg"/>
-				<div class="social">
-					<?php if ($artistMusicURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $artistMusicURL; ?>" target="_new">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="s"/>
-							</a>
-						</div>
-					<?php }; ?>
-					<?php if ($artistTwitterURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $artistTwitterURL; ?>" target="_new">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="t"/>
-							</a>
-						</div>
-					<?php }; ?>
-					<?php if ($artistFacebookURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $artistFacebookURL; ?>" target="_new">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="f"/>
-							</a>
-						</div>
-					<?php }; ?>
-					<?php if ($artistMusicURL && $artistTwitterURL && $artistFacebookURL) {} elseif ($artistMyspaceURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $artistMyspaceURL; ?>" target="_new">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="m"/>
-							</a>
-						</div>
-					<?php }; ?>
-				</div>
-			</div>
-				<?php
+				<?php if ($artistMusicURL) { ?>
+					<a href="<?php echo $artistMusicURL; ?>" target="_new">SOUNDCLOUD</a>
+				<?php }; ?>
+				<?php if ($artistTwitterURL) { ?>
+					<a href="<?php echo $artistTwitterURL; ?>" target="_new">TWITTER</a>
+				<?php }; ?>
+				<?php if ($artistFacebookURL) { ?>
+					<a href="<?php echo $artistFacebookURL; ?>" target="_new">FACEBOOK</a>
+				<?php }; ?>
+				<?php if ($artistMusicURL && $artistTwitterURL && $artistFacebookURL) {} elseif ($artistMyspaceURL) { ?>
+					<a href="<?php echo $artistMyspaceURL; ?>" target="_new">MYSPACE</a>
+				<?php }; ?>
+			<?php
 			};
 			?>
 
-
-			<div class="panel venue">
-				<?php if ($venCalendarURL) { ?>
-					<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
-						<h1><?php echo $venName; ?></h1>
-					</a>
-				<?php } else { ?>
+			<?php if ($venCalendarURL) { ?>
+				<a href="<?php echo $venCalendarURL; ?>" target="_new" title="">
 					<h1><?php echo $venName; ?></h1>
-				<?php }; ?>
-				<img class="venImg" src="<?php echo $venImg['sizes']['artist-img']; ?>">
-				<div class="social">
-					<?php if ($venTwitterURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $venTwitterURL; ?>" target="_new" title="">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="t"/>
-							</a>
-						</div>
-					<?php }; ?>
-					<?php if ($venFacebookURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $venFacebookURL; ?>" target="_new" title="">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="f"/>
-							</a>
-						</div>
-					<?php }; ?>
-					<?php if ($venMapURL) { ?>
-						<div class="icon">
-							<a href="<?php echo $venMapURL; ?>" target="_new" title="">
-								<img src="<?php bloginfo('stylesheet_directory'); ?>/images/sprite3_3.png" width="336" height="96" class="ma"/>
-							</a>
-						</div>
-					<?php }; ?>
-				</div>
-			</div>
+				</a>
+			<?php } else { ?>
+				<h1><?php echo $venName; ?></h1>
+			<?php }; ?>
+			<?php if ($venTwitterURL) { ?>
+					<a href="<?php echo $venTwitterURL; ?>" target="_new" title="">TWITTER</a>
+			<?php }; ?>
+			<?php if ($venFacebookURL) { ?>
+					<a href="<?php echo $venFacebookURL; ?>" target="_new" title="">FACEBOOK</a>
+			<?php }; ?>
+			<?php if ($venMapURL) { ?>
+					<a href="<?php echo $venMapURL; ?>" target="_new" title="">MAP</a>
+			<?php }; ?>
+			<?php echo $dayOfWeek . " " . $monthName . " " . $monthNum; ?>
+			<?php if ($ticketLink) { ?>
+				<a href="<?php echo $ticketLink; ?>" target="_new">TICKETS</a>
+			<?php }; ?>
+			<?php if ($rsvp) { ?>
+				<a href="<?php echo $rsvp; ?>">RSVP</a>
+			<?php }; ?>
+
 		</div>
 	</div>
 
