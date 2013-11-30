@@ -2,7 +2,7 @@
 Theme Name: 	Bridge Town Bass Development
 Theme URI: 		http://bridgetownbass.com/
 Description: 	Portland Bass
-Version: 		0.1
+Version: 		1.1
 Author: 		Fitz Ryland
 Author URI: 	http://FitzhughRyland.com
 */
@@ -68,10 +68,6 @@ $orange:#ff9f00; // HSL 37, 100, 50
 
 /*										1. *general
 */
-header, section, article {
-	display: block;
-
-}
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 }
@@ -122,32 +118,12 @@ header {
 	display: none;
 }
 section {
-	margin: 0 auto;
+	margin: 1em auto 2em;
 	width: 300px;
 }
-/********* EVENTS *********/
-.event {
-	background-image: url('images/articleBG_1.png');
-	margin: 0.5em 0 2em;
-	position: relative;
-	text-align: center;
-	z-index: 50;
+.poster {
+	margin: 1em 0;
 }
-.moreTab {
-	background-color: $orange;
-	bottom: -2em;
-	position: absolute;
-	right: 0;
-}
-.info {
-	border: 0.5em solid $orange;
-	display: none;
-}
-.artistImg {
-	display: block;
-	margin: 0 auto;
-}
-
 
 
 
