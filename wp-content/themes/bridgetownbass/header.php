@@ -1,22 +1,21 @@
 <!DOCTYPE HTML>
-<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]--> 
-<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]--> 
-<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]--> 
-<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
+<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 		<title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--TODO Come back to this for Responsive-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="google" value="notranslate" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
+		<link rel="shortcut icon" href="favicon.ico"> <link rel="shortcut icon" href="favicon.gif">
 		<link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"  ></script>
-		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/js.js"  ></script>
-		<link rel="shortcut icon" href="favicon.ico"> <link rel="shortcut icon" href="favicon.gif">
-		
+
 		<?php wp_head(); ?>
 		<script type="text/javascript">
 
@@ -37,6 +36,5 @@
 		<div class="fixedCenter"></div>
 		<header>
 			<?php include 'heading.php'; ?>
-			
 		</header>
 		<section>

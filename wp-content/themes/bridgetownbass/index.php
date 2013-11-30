@@ -24,9 +24,15 @@ if ($pageposts):
 	global $post;
 foreach ($pageposts as $post):
 	setup_postdata($post);
-	
-	include 'event.php';
-	
+
+	// Photo
+	$photoMeta = get_field('photo');
+	$photoURL = $photoMeta['sizes']['medium'];
+	$photoAlt = $photoMeta['alt'];
+	?>
+		<img class="poster" src="<?php echo $photoURL; ?>" alt="<?php echo $photoAlt; ?>" />
+	<?php
+
 endforeach;
 else :
 endif;
